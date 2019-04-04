@@ -1,0 +1,9 @@
+import './layout.html';
+import '../menuBtn/menuBtn';
+import '../home/home';
+import '../login/login';
+import '../aPropos/aPropos';
+import '../methode/methode';
+import '../graphique/graphique';
+import '../parametres/parametres';
+import '../feedback/feedback';

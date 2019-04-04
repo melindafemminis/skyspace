@@ -1,0 +1,1 @@
+import './parametres.html';

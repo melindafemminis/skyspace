@@ -1,0 +1,37 @@
+<template name='menuBtn'>
+    <!--Barre de navigation avec classe bootstrap 4-->
+<nav class="navbar navbar-light navbar-1 white navbar-fixed-top navbar-absolute">
+      
+        <!-- Collapse button (le span est le logo du hamburger menu) -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+          aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></button>
+      
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse overlay" id="navbarSupportedContent15">
+          
+        <!-- Close button -->
+          <a href="javascript:void(0)" class="closebtn">&times;</a>
+
+          <!-- Lien des pages -->
+          <div class="overlay-content">
+              <a href="/">Accueil</a>
+              <a href="methode">Méthode</a>
+              <a href="graphique">Graphique</a>
+              <a href="parametres">Paramètres</a>
+              <a href="feedback">Feedback</a>
+              <a href="apropos">A propos</a>
+              <!-- Partie pour les boutons -->
+              {{#unless loggingIn}}
+              {{#if currentUser}}
+                <button class='btn btn-outline-secondary js-logout'>Déconnexion</button>
+                <span class='navbar-text ml-2'>
+                  {{currentUser.profile.pseudo}}
+                </span>
+              {{else}}
+                <button class='btn btn-success js-open-login'>Connexion</button>
+              {{/if}}
+              {{/unless}}
+          </div> 
+        </div>
+      </nav>
+</template>
