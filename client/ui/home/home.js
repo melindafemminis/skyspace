@@ -1,3 +1,8 @@
 import './home.html';
 
-//L'évenement pour commencer la méthode en cliquand sur le bouton startMethod sera ici et renverra au template jauge1
+Template.home.events({
+    'click #startMethod'(event, instance) {
+        event.preventDefault();  
+        FlowRouter.go('jauge1');
+    }
+});

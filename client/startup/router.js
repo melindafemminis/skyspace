@@ -42,3 +42,9 @@ FlowRouter.route('/parametres', {
         BlazeLayout.render('parametres');
     }
 });
+
+FlowRouter.route('/jauge1', {
+    action(){
+        BlazeLayout.render('jauge1');
+    }
+});

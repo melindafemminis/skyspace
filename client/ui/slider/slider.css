@@ -1,0 +1,26 @@
+/*CSS pour que le slider soit vertical (source developer mozilla > input range)*/
+
+.sliderWrapper {
+    display: inline-block;
+    width: 20px;
+    height: 150px;
+    padding: 0;
+  }
+  
+  .sliderWrapper input {
+    width: 150px;
+    height: 20px;
+    margin: 0;
+    transform-origin: 75px 75px;
+    transform: rotate(-90deg);
+  }
+  
+  /* CSS pour que le bouton n'apparaisse seulement apres que l'utilisateur touche le slider range*/
+  
+  .nePasMontrer {
+    visibility: hidden;
+  }
+  
+  .montrer {
+    visibility: visible;
+  }
