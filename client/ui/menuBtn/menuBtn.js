@@ -6,6 +6,10 @@ Template.menuBtn.events({
     'click .closebtn'(event) {
         document.getElementById("navbarSupportedContent15").style.height = "0%";
     },
+    //J'aimerais ici dire que quand l'utilisateur clique en dehors du overay (= a droite) le menu se ferme !!!!!
+    // 'click body'(event, instance) {
+    //     document.getElementById("navbarSupportedContent15").style.height = "0%";
+    // },
     //Pour la connexion et déconnexion
     'click .js-open-login'(event, instance) {
         Modal.show('login');
