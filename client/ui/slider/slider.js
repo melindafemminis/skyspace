@@ -22,3 +22,5 @@ Template.slider.events({
       document.getElementById("sliderNextButton").setAttribute('class', 'montrer');
     }
   })
+
+  

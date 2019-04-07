@@ -48,3 +48,10 @@ FlowRouter.route('/jauge1', {
         BlazeLayout.render('jauge1');
     }
 });
+
+FlowRouter.route('/54321', {
+    action(){
+        BlazeLayout.render('54321');
+    }
+});
+

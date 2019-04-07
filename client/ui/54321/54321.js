@@ -37,3 +37,5 @@ var answered = {
       compteur ++;
     }
   }
+
+  
