@@ -24,3 +24,7 @@
   .montrer {
     visibility: visible;
   }
+
+  .bouton{
+    padding-top: 4%; 
+  }

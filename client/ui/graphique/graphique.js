@@ -1,5 +1,10 @@
 import './graphique.html';
 
+//changer la couleur de fond
+Template.graphique.rendered = function(){
+    $('body').addClass('nuit');
+}
+
 //Importation des fichiers nécessaire à la création du graphique avec chart.js
 import '../../../node_modules/chart.js/dist/Chart.bundle';
 import '../../../node_modules/chart.js/dist/Chart.bundle.min';
@@ -7,8 +12,10 @@ import '../../../node_modules/chart.js/dist/Chart.bundle.min';
 Template.graphique.events({
   'click #graphBtn': function(){
     var ctx = $('#myChart');
+    Chart.defaults.global.defaultFontColor = "rgba(240,251,255,1)",
 console.log(ctx);
 var myChart = new Chart(ctx, {
+    
     type: 'line',
     data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
@@ -31,7 +38,11 @@ var myChart = new Chart(ctx, {
                 'rgba(153, 102, 255, 1)',
                 'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 1,
+            backgroundColor: "rgba(240,251,255,0.5)",
+            borderColor: "rgba(240,251,255,1)",
+            fontColor: "rgba(240,251,255,0.5)",
+            
         }]
     },
     options: {
