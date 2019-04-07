@@ -1,0 +1,28 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+
+
+  .sky{
+    color: #F0FBFF;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    letter-spacing: 5px;
+  }
+
+  .img-fluid{
+    max-width: 25%; 
+    height: auto; 
+    padding-left: 4%;
+  }
+
+  .nuit {
+    background: #08092a;
+    background: linear-gradient(180deg, #0E2337 26.24%, #245582 76.52%, #3677B4 99.61%);
+  }
