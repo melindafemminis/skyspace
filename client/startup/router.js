@@ -55,3 +55,14 @@ FlowRouter.route('/54321', {
     }
 });
 
+Template.slider.events({
+    'click #sliderNextButton'(event, instance) {
+        event.preventDefault();  
+        FlowRouter.go('54321');
+        action()
+        {
+            BlazeLayout.render('54321')
+        }
+    } 
+    
+});
