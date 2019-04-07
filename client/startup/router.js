@@ -1,12 +1,6 @@
 import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 
-FlowRouter.route('/test', {
-    action(){
-        console.log('le test!');
-    }
-});
-
 FlowRouter.route('/', {
     action(){
         BlazeLayout.render('layout');
@@ -53,16 +47,4 @@ FlowRouter.route('/54321', {
     action(){
         BlazeLayout.render('54321');
     }
-});
-
-Template.slider.events({
-    'click #sliderNextButton'(event, instance) {
-        event.preventDefault();  
-        FlowRouter.go('54321');
-        action()
-        {
-            BlazeLayout.render('54321')
-        }
-    } 
-    
 });

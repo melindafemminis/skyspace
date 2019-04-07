@@ -9,3 +9,4 @@ import '../parametres/parametres';
 import '../feedback/feedback';
 import '../slider/slider';
 import '../jauge1/jauge1';
+import '../54321/54321';
