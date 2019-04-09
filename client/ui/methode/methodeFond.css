@@ -17,12 +17,16 @@ html, body {
   }
 
   .img-fluid{
+    position: absolute;
     max-width: 25%; 
     height: auto; 
     padding-left: 4%;
+    z-index: -1;
   }
 
   .nuit {
     background: #08092a;
     background: linear-gradient(180deg, #0E2337 26.24%, #245582 76.52%, #3677B4 99.61%);
   }
+
+  

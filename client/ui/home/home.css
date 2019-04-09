@@ -5,12 +5,13 @@
 #titre{
     color: #245582 ;
     letter-spacing: 5px;
-    padding-bottom: 2%;
-    font-size: 350%;
+    padding: 7% 0% 2%;
+    font-size: 80px;
+
 }
 
 .commencer{
-    font-size: 200%;
+    font-size: 50px;
     color: #8F7E5D ;
     letter-spacing: 2px;
     background-color: #FFE9BE;
@@ -22,8 +23,7 @@
 }
 
 .logo{
-    max-width: 50% !important; 
+    max-width: 6% !important; 
     padding-bottom: 2%;
     max-height: auto;
 }
-

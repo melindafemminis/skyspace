@@ -72,12 +72,14 @@ html, body {
 
 
 #soleil{
-    margin-top: 50px !important;
+    position:absolute;
+    margin-top: 2% !important;
     height: 100px;
     width: 100px;
     background-color:white;
     border-radius: 50%;
     box-shadow: 0px 0px 100px 30px #fff;
+    z-index: -1;
 }
 
 

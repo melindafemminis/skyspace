@@ -2,7 +2,10 @@ import './theMethod.html';
 import './theMethod.css';
 
 
-
+//changer la couleur de fond du body
+Template.fondmethode.rendered = function(){
+    $('body').addClass('nuit');
+}
 
 // Current state
 var answered = {
