@@ -43,8 +43,8 @@ FlowRouter.route('/jauge1', {
     }
 });
 
-FlowRouter.route('/54321', {
+FlowRouter.route('/theMethod', {
     action(){
-        BlazeLayout.render('54321');
+        BlazeLayout.render('theMethod');
     }
 });

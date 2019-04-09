@@ -14,7 +14,7 @@ Template.slider.events({
       //Simple console log de la valeur du slider pour voir que ça marche
       console.log(document.getElementById("rangeSlider").value);
       //Changer de page 
-      FlowRouter.go('54321');
+      FlowRouter.go('theMethod');
     },
 
     //Défini ce qu'il se passe quand le slider change de valeur
