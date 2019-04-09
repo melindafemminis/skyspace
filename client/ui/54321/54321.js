@@ -16,7 +16,7 @@ var answered = {
   var numberOfButtons = 5;
 
   var compteur = 0;
-  button.onclick = function(){
+  function myFunction(buttonNumber) {
     // Update state on button click
     answered["button" + buttonNumber] = true;
     // Have all buttons been clicked?
@@ -40,6 +40,6 @@ var answered = {
       compteur ++;
     };
   };
- 
+
 
   
