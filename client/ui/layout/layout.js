@@ -10,3 +10,4 @@ import '../feedback/feedback';
 import '../slider/slider';
 import '../jauge1/jauge1';
 import '../theMethod/theMethod';
+import '../jauge2/jauge2';
