@@ -38,6 +38,7 @@ Template.fondmethode.rendered = function(){
         if(compteur < 5){
           event.preventDefault(); 
           event.currentTarget.setAttribute('class', 'thebtn2');
+         
 
         //Si on a cliqué tous les boutons de la première page
         } else if(compteur == 5){
