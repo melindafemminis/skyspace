@@ -76,7 +76,7 @@ import './theMethod.css';
             document.getElementById("step1").innerHTML = "Identify 1 things you can taste";
             numberOfButtons--;
             classe();
-        
+            
         //Quand tous le bouton de la premiere page est cliqué
         } else if(compteur == 15){
           event.preventDefault();
