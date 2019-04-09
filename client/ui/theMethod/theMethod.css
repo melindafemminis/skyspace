@@ -23,7 +23,7 @@
      border: none;
      box-shadow: 0 0 0 0 rgba(77, 75, 88, 0.7);
      border-radius: 50%;
-     background: lightcyan;
+     background:darkblue;
      -ms-animation: pulse 1.25s infinite cubic-bezier(0.2, 0, 0, 1);
      animation: pulse 1.25s infinite cubic-bezier(0.2, 0, 0, 1);
      margin: 10px;
