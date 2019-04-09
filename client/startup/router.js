@@ -48,3 +48,9 @@ FlowRouter.route('/theMethod', {
         BlazeLayout.render('theMethod');
     }
 });
+
+FlowRouter.route('/jauge2', {
+    action(){
+        BlazeLayout.render('jauge2');
+    }
+});
