@@ -1,0 +1,1 @@
+import './sliderBtn2.html';
