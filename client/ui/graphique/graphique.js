@@ -6,7 +6,6 @@ import '../../../node_modules/chart.js/dist/Chart.bundle.min';
 
 
 
-
 ////////////////////////////////////////////////////////////////////////////////////
 /// C O U L E U R   F O N D
 ////////////////////////////////////////////////////////////////////////////////////
@@ -79,8 +78,12 @@ Template.graphique.events({
 Template.graphique.events({
     'click #delete': function(){
         if (confirm('Effacer toutes les données ? Cette action est irréversible.')) {
-            humeurDebut.remove({});
-            humeurFin.remove({});
+            Meteor.call('clearHumeurs', {}, (err, res) => {
+                if (err) {
+                  alert(err);
+                } else {
+                }
+              });
             
         } 
     }
