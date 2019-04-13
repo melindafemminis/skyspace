@@ -1,5 +1,6 @@
 import './sliderBtn2.html';
 
+
 Template.sliderBtn2.events({
     //Code pour définir ce qu'il se passe quand le bouton 'suivant' est cliqué
     'click #sliderNextButton2'(event, instance) {
