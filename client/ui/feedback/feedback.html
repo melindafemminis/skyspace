@@ -1,7 +1,19 @@
 <template name='feedback'>
         {{> menuBtn}}
         <div class='container'>
-                <h3>Le template pour le feedback Link /feedback</h3>
+                <h3><div class="container">
+                        <form action="">
+                          <h3>Your details</h3>
+                          <svg width="100%" height="100%">
+                            <path class="hidden" d="M0 0 H200 V200 H0 Z"></path>
+                          </svg>
+                          <input type="text" placeholder="Firstname" />
+                          <input type="text" placeholder="Lastname"/>
+                          <input type="email" placeholder="example@mail.com"/>
+                          <button type="submit">Send!</button>
+                        </form>
+                      </div>
+                </h3>
         </div>
     
 </template>
