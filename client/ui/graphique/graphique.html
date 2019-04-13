@@ -1,11 +1,12 @@
 <template name='graphique'>
         {{> menuBtn}}
         <div class='container'>
-                <h3>Link /graphique => avec chart.js</h3>
-                <button id="graphBtn">Créer graphique</button> 
+                <button class='btn btn-default' id="graphBtn">Créer graphique</button>
+                <button class='btn btn-danger' id="delete">Effacer toutes les données</button> 
                 <canvas id="myChart" width="400" height="400">
                 <p>Hello Fallback World</p>
                 </canvas>
+                <div id='leDiv'></div>
         </div>
     
 </template>

@@ -1,9 +1,34 @@
 <template name='parametres'>
-        {{> menuBtn}}
-        {{> fond}}
-              
-<div>PARAMETRES</div>
-                      
+        {{> fond}}    
+        <div id='retour'>Retour</div>        
+        <div class='container'>
 
-    
+                <h3>Paramètres</h3>
+
+                <div id='voixParam' class='params'>
+                        <span>Voix</span>
+                        <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                        </label>
+                </div>
+
+                <div id='musiqueParam' class='params'>
+                        <span>Musique</span>
+
+                        <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                        </label>
+                </div>
+
+                <div id='notifParam' class='params'>
+                        <span>Notifications</span>
+                </div>
+
+                <div id='dataParam' class='params'>
+                        <span>Effacer les données</span>
+                </div>
+
+        </div>
 </template>

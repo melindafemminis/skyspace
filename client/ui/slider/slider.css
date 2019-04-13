@@ -15,16 +15,6 @@
     transform: rotate(-90deg);
   }
   
-  /* CSS pour que le bouton n'apparaisse seulement apres que l'utilisateur touche le slider range*/
-  
-  .nePasMontrer {
-    visibility: hidden;
-  }
-  
-  .montrer {
-    visibility: visible;
-  }
-
-  .bouton{
-    padding-top: 4%; 
-  }
+#sliderValueField {
+  margin-top: 150px;
+}

@@ -1,0 +1,44 @@
+ * { box-sizing: border-box; }
+
+.container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+form {
+  position: relative;
+  width: 100%;
+  margin: 50px auto;
+  padding: 50px;
+  background: white;
+  text-align: center;
+} 
+
+.inputFB {
+  display: inline-block;
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  border: 2px dashed lightblue;
+  outline: none;
+  font-size: 20px;
+  font-family: 'Economica', 'Arial', sans-serif;
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+
+.inputFB:focus { border-color: deepskyblue; }
+
+#inputTexte {
+  height: 30%;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+svg path.hidden { opacity: 0; }
