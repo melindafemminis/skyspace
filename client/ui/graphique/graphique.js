@@ -31,6 +31,10 @@ Template.graphique.events({
         humeurDebut.find().forEach( function(myDoc) { arrValue.push(myDoc.value ); } );
         let arrDate = [];
         humeurDebut.find().forEach( function(myDoc) { arrDate.push(myDoc.createdAt ); } );
+        let arrVAlueFin = [];
+        humeurFin.find().forEach( function(myDoc) { arrVAlueFin.push(myDoc.createdAt); } );
+        let arrDateFin = [];
+        humeurFin.find().forEach( function(myDoc) { arrDateFin.push(myDoc.createdAt); } );
 
         //Le graphique
         var ctx = $('#myChart');
