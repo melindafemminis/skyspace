@@ -56,16 +56,19 @@ Template.graphique.events({
                     borderColor: "rgba(240,251,255,1)",
                     fontColor: "rgba(192, 192, 192,0.5)",
                     
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
+                
+            },{
+                labels: 'humeurFin',
+                data: arrVAlueFin,
+                backgroundColor:"rgba(192, 192, 192,0.5)",
+                borderColor: "rgba(192, 192, 192,0.5)",
+                borderWidth: 1,
+                backgroundColor: "rgba(192, 192, 192,0.5)",
+                borderColor: "rgba(240,251,255,1)",
+                fontColor: "rgba(192, 192, 192,0.5)",
                 }
+            ]
+            
             }
         });
 
