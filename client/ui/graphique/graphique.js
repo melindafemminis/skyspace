@@ -1,4 +1,5 @@
 import './graphique.html';
+import './graphique.css';
 import '../../../both/collections';
 //Importation des fichiers nécessaire à la création du graphique avec chart.js
 import '../../../node_modules/chart.js/dist/Chart.bundle';
@@ -10,9 +11,9 @@ import '../../../node_modules/chart.js/dist/Chart.bundle.min';
 /// C O U L E U R   F O N D
 ////////////////////////////////////////////////////////////////////////////////////
 
-Template.graphique.rendered = function(){
-    $('body').addClass('nuit');
-}
+// Template.graphique.rendered = function(){
+//     $('body').addClass('nuit');
+// }
 
 
 
