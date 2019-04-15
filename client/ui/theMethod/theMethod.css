@@ -9,7 +9,7 @@
      background: rgb(255, 255, 255);
      -ms-animation: pulse 1.25s infinite cubic-bezier(0.2, 0, 0, 1);
      animation: pulse 1.25s infinite cubic-bezier(0.2, 0, 0, 1);
-     margin: 4%;
+     margin: 2%;
      margin-top: 20%;
   }
 
@@ -23,7 +23,7 @@
      background:  #3677B4;
      -ms-animation: pulse 1.25s infinite cubic-bezier(0.2, 0, 0, 1);
      animation: pulse 1.25s infinite cubic-bezier(0.2, 0, 0, 1);
-     margin: 4%;
+     margin: 2%;
      margin-top: 20%;
   }
 

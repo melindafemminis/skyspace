@@ -6,3 +6,26 @@
 .final {
     width: 300px;
 }
+
+#recommencer {
+    background-color:#245582!important;
+    border-color: #245582 !important;
+    font-size: 20px;
+    font-family: "Montserrat";
+}
+
+#recommencer:hover{
+    opacity: 0.7;
+}
+#leRetour{
+    background-color:rgb(0,0,0,0) !important;
+    border-color: #245582 !important;
+    font-size: 20px;
+    font-family: "Montserrat";
+    color:  #245582;
+}
+
+#leRetour:hover{
+    color: white;
+    opacity: 0.7;
+}

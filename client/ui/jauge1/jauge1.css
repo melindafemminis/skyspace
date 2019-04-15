@@ -2,7 +2,15 @@
     font-family: "Montserrat";
 }
 
-.sentir{
-    padding-bottom: 5%;
-    color: #0E2337; 
+
+#sliderNextButton{
+    background-color:#245582!important;
+    border-color: #245582 !important;
+    font-size: 20px;
+    font-family: "Montserrat";
+}
+
+#sliderNextButton:hover{
+    background-color: #245582 !important;
+    opacity: 0.7;
 }
