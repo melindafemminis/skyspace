@@ -1,5 +1,4 @@
 import './graphique.html';
-import './graphique.css';
 import '../../../both/collections';
 //Importation des fichiers nécessaire à la création du graphique avec chart.js
 import '../../../node_modules/chart.js/dist/Chart.bundle';
@@ -32,49 +31,48 @@ Template.graphique.events({
         humeurDebut.find().forEach( function(myDoc) { arrValue.push(myDoc.value ); } );
         let arrDate = [];
         humeurDebut.find().forEach( function(myDoc) { arrDate.push(myDoc.createdAt ); } );
-        let arrVAlueFin = [];
-        humeurFin.find().forEach( function(myDoc) { arrVAlueFin.push(myDoc.createdAt); } );
+        let arrValueFin = [];
+        humeurFin.find().forEach( function(myDoc) { arrValueFin.push(myDoc.value); } );
         let arrDateFin = [];
         humeurFin.find().forEach( function(myDoc) { arrDateFin.push(myDoc.createdAt); } );
 
         //Le graphique
         var ctx = $('#myChart');
-        Chart.defaults.global.defaultFontColor = "rgba(240,251,255,1)",
-        console.log(ctx);
+        Chart.defaults.global.defaultFontColor = "rgba(240,251,255,1)";
         var myChart = new Chart(ctx, {
-            
             type: 'line',
             data: {
-                labels: arrDate,
-                datasets: [{
-                    label: 'humeurDebut',
-                    data: arrValue,
-                    backgroundColor: "rgba(192, 192, 192,0.5)",
-                    borderColor: "rgba(192, 192, 192,0.5)",
-                    borderWidth: 1,
-                    backgroundColor: "rgba(192, 192, 192,0.5)",
-                    borderColor: "rgba(240,251,255,1)",
-                    fontColor: "rgba(192, 192, 192,0.5)",
-                    
-                
-            },{
-                labels: 'humeurFin',
-                data: arrVAlueFin,
-                backgroundColor:"rgba(192, 192, 192,0.5)",
-                borderColor: "rgba(192, 192, 192,0.5)",
-                borderWidth: 1,
-                backgroundColor: "rgba(192, 192, 192,0.5)",
-                borderColor: "rgba(240,251,255,1)",
-                fontColor: "rgba(192, 192, 192,0.5)",
-                }
-            ]
-            
-            }
+				labels: arrDateFin,
+				datasets: [{
+					label: 'Humeurs Début',
+					backgroundColor: "rgba(100,251,255,1)",
+					borderColor: "rgba(100,251,255,0.7)",
+					data: arrValue.map(function(i){
+                        return parseInt(i, 10);
+                    }),
+					fill: false,
+				}, {
+					label: 'Humeur Fin',
+					fill: false,
+					backgroundColor: "rgba(100,120,255,1)",
+					borderColor: "rgba(100,120,255, 1)",
+					data: arrValueFin.map(function(i){
+                        return parseInt(i, 10);
+                    }),
+				}]
+			},
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+            },
         });
-
-    }
+    },
 });
-
 
 
 
