@@ -1,3 +1,21 @@
 .titre3 {
     color: #F0FBFF; 
+    text-align: center;
+    font-family: "Montserrat";
+}
+
+.titre4 {
+    color: #F0FBFF; 
+    font-family: "Montserrat";
+}
+
+.texteApropos {
+    font-family: "Montserrat";
+    color: #0E2337;
+}
+
+.texteApropos2 {
+    font-family: "Montserrat";
+    font-style: italic;
+    color: #0E2337;
 }
