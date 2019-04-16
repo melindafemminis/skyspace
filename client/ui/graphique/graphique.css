@@ -7,14 +7,7 @@
 #delete{
     background-color:#245582!important;
     border-color: #245582 !important;
-    font-size: 20px;
-    font-family: "Montserrat";
   }
-
-#graphBtn{
-    font-size: 20px;
-    font-family: "Montserrat"; 
-}
 
 #graphBtn:hover{
     opacity: 0.7;
