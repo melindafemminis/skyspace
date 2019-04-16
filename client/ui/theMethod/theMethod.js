@@ -44,7 +44,7 @@ Template.fondmethode.rendered = function(){
         } else if(compteur == 5){
           document.getElementById("button" + numberOfButtons).style.display = "none";
           numberOfButtons--;
-          document.getElementById("step1").innerHTML = "Identify 4 things you can touch";
+          document.getElementById("step1").innerHTML = "Identifie 4 choses que tu peux toucher";
           classe(); 
 
         //Si on est sur la page avec 4 boutons
@@ -55,7 +55,7 @@ Template.fondmethode.rendered = function(){
         //Si on a cliqué sur tous les boutons de la 2eme page
         } else if(compteur == 9){
           document.getElementById("button" + numberOfButtons).style.display = "none";
-          document.getElementById("step1").innerHTML = "Identify 3 things you can hear";
+          document.getElementById("step1").innerHTML = "Identifie 3 choses que tu peux entendre";
           numberOfButtons--;
           classe();
           
@@ -67,7 +67,7 @@ Template.fondmethode.rendered = function(){
           //Si tous les boutons de la 3eme page sont cliqués
         } else if (compteur == 12){
           document.getElementById("button" + numberOfButtons).style.display = "none";
-          document.getElementById("step1").innerHTML = "Identify 2 things you can smell";
+          document.getElementById("step1").innerHTML = "Identifie 2 choses que tu peux sentir";
           numberOfButtons--; 
           classe();
 
@@ -79,7 +79,7 @@ Template.fondmethode.rendered = function(){
         //Si tous les boutons de la 2eme page sont cliqués
         } else if(compteur == 14){
             document.getElementById("button" + numberOfButtons).style.display = "none";
-            document.getElementById("step1").innerHTML = "Identify 1 things you can taste";
+            document.getElementById("step1").innerHTML = "Identifie 1 chose que tu peux goûter";
             numberOfButtons--;
             classe();
             

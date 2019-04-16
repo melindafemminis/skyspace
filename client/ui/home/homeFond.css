@@ -22,6 +22,7 @@ html, body {
     bottom: 0;
     width: 100%;
     background: #FFE9BE;
+    z-index: -2;
 }
 
 
@@ -33,16 +34,19 @@ html, body {
     height: 50px;
     bottom: 0;
     width: 100%;
+    z-index: -1;
 }
 
 
 
 #forme2{
+    height: 130px;
     position: fixed;
     border-bottom: 100px solid #FFE9BE;
 	border-left: 0px solid transparent;
     border-right: 60px solid transparent;
     width: 20%;
+    z-index: -2;
 }
 
 #forme3{
@@ -51,6 +55,7 @@ html, body {
 	border-left: 0px solid transparent;
     border-right: 150px solid transparent;
     width: 40%;
+    z-index: -2;
 }
 
 #forme4{
@@ -59,6 +64,7 @@ html, body {
 	border-left: 0px solid transparent;
     border-right: 500px solid transparent;
     width: 100%;
+    z-index: -2;
 }
 
 #forme5{
@@ -66,7 +72,8 @@ html, body {
     border-bottom: 80px solid #FFE9BE;
 	border-left: 800px solid transparent;
     border-right: 0px solid transparent;
-    width: 150%;   
+    width: 150%; 
+    z-index: -2;  
 }
 
 

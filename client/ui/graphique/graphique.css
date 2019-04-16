@@ -1,7 +1,8 @@
 .graph {
     display: block;
     margin: 0 auto;
-    width: 300px;
+    width: 80%;
+    height: 80%;
 }
 
 #delete{

@@ -8,6 +8,7 @@
     background-color: lightgray;
 }
 
+
 /* CSS pour les switch parce que je n'ai pas trouvé comment le faire en bootstrap*/
 
 .switch {
@@ -71,6 +72,8 @@ input:focus + .slider {
 
 .params {
       margin: 40px;
+      font-family:"Montserrat";
+
   }
 
 label {
