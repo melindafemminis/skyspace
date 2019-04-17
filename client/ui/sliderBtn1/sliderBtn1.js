@@ -1,6 +1,18 @@
 import './sliderBtn1.html'
 
 Template.sliderBtn1.events({
+
+      //Défini ce qu'il se passe quand le slider change de valeur
+  'change #rangeSlider'(event, instance) {
+    // Défini le innerHTML du span pour afficher la valeur choisie
+    document.getElementById("sliderValueField").innerHTML= event.target.value;
+    // Change la classe des 2 bouttons pour les afficher
+    document.getElementById("sliderNextButton").removeAttribute('class', 'disabled');
+    document.getElementById("sliderNextButton").setAttribute('class', 'btn btn-secondary');
+    document.getElementById("sliderNextButton2").removeAttribute('class', 'disabled');
+    document.getElementById("sliderNextButton2").setAttribute('class', 'btn btn-secondary');
+  },
+
     //Code pour définir ce qu'il se passe quand le bouton 'suivant' est cliqué
     'click #sliderNextButton'(event, instance) {
       event.preventDefault();
