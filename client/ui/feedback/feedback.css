@@ -1,5 +1,3 @@
- * { box-sizing: border-box; }
-
 .container {
   position: relative;
   width: 80%;
@@ -30,20 +28,6 @@ form {
 
 .inputFB:focus { border-color: deepskyblue; }
 
-#inputTexte {
-  height: 30%;
+#h3css {
+  color: darkslategray;
 }
-
-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-
-svg path.hidden { opacity: 0; }
-
-.feedback{
-  font-family:"Montserrat"
-}
-
