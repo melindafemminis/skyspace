@@ -86,7 +86,7 @@ Template.fondmethode.rendered = function(){
         //Quand tous le bouton de la premiere page est cliqué
         } else if(compteur == 15){
           event.preventDefault();
-          FlowRouter.go('jauge2');
+          FlowRouter.go('jauge2?soundPosition='+Template.fond.audio.currentTime+'&isMute='+Template.fond.isMute);
         }
       }
   });

@@ -11,7 +11,7 @@ import './parametres.css';
 
 Template.parametres.events({
     'click #retour'(event, instance){
-        FlowRouter.go('/');
+        FlowRouter.go('/?soundPosition='+Template.fond.audio.currentTime+'&isMute='+Template.fond.isMute);
     }
 });
 

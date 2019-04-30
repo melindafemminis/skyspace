@@ -1,4 +1,7 @@
 
+#space{
+  pointer-events: none; /*to allow click through menu button. */
+}
 #space, .stars {
     overflow: hidden;
     position: absolute;

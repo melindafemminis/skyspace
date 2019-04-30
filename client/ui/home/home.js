@@ -10,6 +10,6 @@ Template.fond.rendered = function(){
 Template.home.events({
     'click #startMethod'(event, instance) {
         event.preventDefault();  
-        FlowRouter.go('jauge1');
+        FlowRouter.go('jauge1?soundPosition='+Template.fond.audio.currentTime+'&isMute='+Template.fond.isMute);
     }
 });

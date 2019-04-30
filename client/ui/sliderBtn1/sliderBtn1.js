@@ -12,6 +12,6 @@ Template.sliderBtn1.events({
       //Simple console log de la valeur du slider pour voir que ça marche
       console.log(document.getElementById("rangeSlider").value);
       //Changer de page 
-      FlowRouter.go('theMethod');
+      FlowRouter.go('theMethod?soundPosition='+Template.fond.audio.currentTime+'&isMute='+Template.fond.isMute);
     }
 });
