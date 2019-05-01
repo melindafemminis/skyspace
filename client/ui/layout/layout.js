@@ -15,4 +15,3 @@ import '../sliderBtn1/sliderBtn1';
 import '../sliderBtn2/sliderBtn2';
 import '../soundPlayer/soundPlayer';
 import '../final/final';
-
