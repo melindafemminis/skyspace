@@ -1,3 +1,5 @@
+import '../parametres/parametres.html';
+
 
 //fonction qui permet de commencer la musique si on n'a pas mute.
 //Si le navigateur empeche de commencer la musique, on a un catch, et donc on mute la musique. Ainsi l'utilisateur verra que la musique est mute est en cliquant sur le bouton de musique, la navigateur acceptera cette fois de lancer la musique car c'est l'utilisateur qui le demande et non l'automatisme javascript
@@ -65,10 +67,12 @@ Template.fond.audioMute = function(){
         document.getElementById('soundButton').src = "/volume.png";
         Template.fond.isMute = false;
         Template.fond.audioPlay(); //on démarre la musique
+        document.getElementById("switchMusic").checked = true;
     }else{
         Template.fond.isMute = true;
         document.getElementById('soundButton').src = "/volumeMute.png";
         Template.fond.audio.pause(); //on pause la musique
+        document.getElementById("switchMusic").checked = false;
     }
 }
 
