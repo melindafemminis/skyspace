@@ -1,6 +1,3 @@
-#journalData{
-    width:80%;
-    height:250px;
-    margin-left:auto;
-    margin-right:auto;
+.resize-vertical{
+    resize: vertical;
 }

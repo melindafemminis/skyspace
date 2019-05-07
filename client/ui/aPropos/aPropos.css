@@ -19,3 +19,8 @@
     font-style: italic;
     color: #F0FBFF;
 }
+
+.containerAPropos{
+    overflow: auto;
+    max-height: 80vh;
+}

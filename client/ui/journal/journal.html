@@ -1,10 +1,38 @@
-<template name='journal'>
+<template name="form_new_note">
     {{> menuBtn}}
-    <div class='container text-center' id='journalZone'>
-        <textarea id="journalData"></textarea>
-    </div>
-    <div class="container text-center" id="previusJournal">
-        {{journalData}}
+    {{> list_note}}
+    <h1>Journal</h1>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form class="js_new_note">
+                        <input class="form-control" type="text" name="title" placeholder="Titre de la note">
+                        <textarea class="form-control resize-vertical" name="text" cols="80" rows="4"></textarea>
+
+                        <button class="btn btn-primary" type="submit" name="button">Ajouter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
+</template>
+
+<template name="list_note">
+    <h2>Liste des notes</h2>
+    {{#each note in notes}}
+       {{> single_note note=note}}
+    {{/each}}
+</template>
+
+<template name="single_note">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{note.title}}</h3>
+        </div>
+        <div class="panel-body">
+            <p>{{note.text}}</p>
+        </div>
+    </div>       
 </template>
