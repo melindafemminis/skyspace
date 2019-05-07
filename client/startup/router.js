@@ -31,6 +31,12 @@ FlowRouter.route('/feedback', {
     }
 });
 
+FlowRouter.route('/journal', {
+    action(){
+        BlazeLayout.render('journal');
+    }
+});
+
 FlowRouter.route('/parametres', {
     action(){
         BlazeLayout.render('parametres');

@@ -13,5 +13,6 @@ import '../theMethod/theMethod';
 import '../jauge2/jauge2';
 import '../sliderBtn1/sliderBtn1';
 import '../sliderBtn2/sliderBtn2';
+import '../journal/journal';
 import '../soundPlayer/soundPlayer';
 import '../final/final';

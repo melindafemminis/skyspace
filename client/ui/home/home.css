@@ -29,3 +29,12 @@
     padding-bottom: 2%;
     max-height: auto;
 }
+
+.citation {
+    display: none;
+    width:100%;
+    text-align:center;
+    margin-top:80px;
+    font-size:24px;
+    color:#245582;
+}
