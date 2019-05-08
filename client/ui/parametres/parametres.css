@@ -1,14 +1,9 @@
 #retour {
-    background-color: grey;
-    height: 60px;
-    width: 60px;
+    position: relative;
+    top: 12%;
+    width: 10%;
+    margin-top: 1em;
 }
-
-#retour:hover {
-    background-color: lightgray;
-}
-
-
 /* CSS pour les switch parce que je n'ai pas trouvé comment le faire en bootstrap*/
 
 .params {
