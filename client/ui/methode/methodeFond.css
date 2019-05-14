@@ -29,4 +29,8 @@ html, body {
     background: linear-gradient(180deg, #0E2337 26.24%, #245582 76.52%, #3677B4 99.61%);
   }
 
-  
+
+  .nuitMontagne{
+    background: #08092a;
+    background: linear-gradient(180deg,#0E2337   26.24%,#181A63 76.52%, #41449A 99.61%);
+  }

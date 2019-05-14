@@ -1,0 +1,69 @@
+.fixed-bottom{
+    position: fixed;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+
+  .sky{
+    color: #F0FBFF;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    letter-spacing: 5px;
+  }
+
+  .img-fluid{
+    position: absolute;
+    max-width: 25%; 
+    height: auto; 
+    padding-left: 4%;
+    z-index: -2;
+  }
+
+  .purple {
+    background: #08092a;
+    background: linear-gradient(180deg, #181A63 5.03%, #41449A 16.41%, #A16BB4 56.87%, #FFCFEB 92.54%, rgba(251, 118, 187, 0.0316354) 99.99%, #1E5BB5 100%);
+  }
+
+
+.sol{
+    height: 80px;
+    bottom: 0;
+    width: 100%;
+    background: radial-gradient(360.62px at 88% 38.15%, #181A63 0%, #391863 100%);
+    z-index: -2;
+}
+
+.montagne1{
+  width: 50px;
+	height: 0;
+	border-left: 150px solid transparent;
+	border-right: 150px solid transparent;
+  border-bottom: 300px solid #391863;
+}
+
+.montagne2{
+  width: 50px;
+	height: 0;
+	border-left: 130px solid transparent;
+	border-right: 130px solid transparent;
+  border-bottom: 220px solid #391863;
+  margin-left: 200px;
+}
+
+.montagne3{
+  width: 50px;
+	height: 0;
+	border-left: 120px solid transparent;
+	border-right: 120px solid transparent;
+  border-bottom: 200px solid #181A63;
+  margin-left: 160px;
+  z-index: -3;
+}

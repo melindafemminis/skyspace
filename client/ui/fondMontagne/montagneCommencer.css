@@ -1,0 +1,27 @@
+
+#titreBis{
+    color:#F7EAFF;
+    letter-spacing: 5px;
+    padding: 7% 0% 2%;
+    font-size: 80px;
+}
+
+.commencerBis{
+    font-size: 50px;
+    color:#41449A;
+    letter-spacing: 2px;
+    background-color:white;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.commencer:hover{
+    opacity:0.7;
+    cursor:pointer;
+}
+
+.logo{
+    max-width: 6% !important; 
+    padding-bottom: 2%;
+    max-height: auto;
+}
