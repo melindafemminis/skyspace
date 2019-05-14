@@ -31,9 +31,15 @@ FlowRouter.route('/feedback', {
     }
 });
 
-FlowRouter.route('/form_new_note', {
+FlowRouter.route('/journal', {
     action(){
-        BlazeLayout.render('form_new_note');
+        BlazeLayout.render('journal');
+    }
+});
+
+FlowRouter.route('/bubblepop', {
+    action(){
+        BlazeLayout.render('bubblepop');
     }
 });
 
