@@ -47,6 +47,7 @@ html, body {
 	border-left: 150px solid transparent;
 	border-right: 150px solid transparent;
   border-bottom: 300px solid #391863;
+  z-index: -1;
 }
 
 .montagne2{
@@ -56,6 +57,7 @@ html, body {
 	border-right: 130px solid transparent;
   border-bottom: 220px solid #391863;
   margin-left: 200px;
+  z-index: -1;
 }
 
 .montagne3{
