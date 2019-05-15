@@ -32,8 +32,9 @@
     margin-top: 5%;
   }
 
-
-
+  button:focus {
+    outline:0;
+  }
 
 
   @-webkit-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
