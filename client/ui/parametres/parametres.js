@@ -1,6 +1,7 @@
 import './parametres.html';
 import './parametres.css';
 import '../soundPlayer/soundPlayer';
+import '../../../both/collections';
 
 
 
@@ -12,7 +13,7 @@ Template.parametres.events({
     'click #retour'(event, instance){
         FlowRouter.go('/?soundPosition='+Template.fond.audio.currentTime+'&isMute='+Template.fond.isMute);
     },
-    'click #switchMusic'(event, instance){
+    'click #radioMusic'(event, instance){
         if(Template.fond.isMute){
             document.getElementById('soundButton').src = "/volume.png";
             Template.fond.isMute = false;
@@ -24,6 +25,16 @@ Template.parametres.events({
             Template.fond.audio.pause(); //on pause la musique
             document.getElementById("switchMusic").checked = false;
         }
+    },
+    'click #deleteDonnees'(event, instance){
+        if (confirm('Effacer toutes les données ? Cette action est irréversible.')) {
+            Meteor.call('clearHumeurs', {}, (err, res) => {
+                if (err) {
+                  alert(err);
+                } else {
+                }
+              });  
+        } 
     }
 });
 
