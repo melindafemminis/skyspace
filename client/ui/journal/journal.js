@@ -98,7 +98,10 @@ Template.journal.events({
             titre: document.getElementById("inputTitre").value,
             note: document.getElementById("inputNote").value,
             createdAt: new Date()
-          });
+        });
+        //Clear les 2 inputs titre et note
+        document.getElementById('inputTitre').value = '';
+        document.getElementById('inputNote').value = '';
        }
     }
 );

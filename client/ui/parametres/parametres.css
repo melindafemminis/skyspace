@@ -9,8 +9,13 @@
 .params {
       margin: 40px;
       font-family:"Montserrat";
+      font-size: 20px;
   }
 
-label {
-     margin-left: 300px;
+h3 {
+    text-align: center;
+}
+
+input {
+    margin-left: 90%;
 }
