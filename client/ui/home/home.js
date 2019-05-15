@@ -3,7 +3,7 @@ import './homeFond.html';
 import './commencer.html';
 import '../fondMontagne/montagne.html';
 import '../fondMontagne/montagneCommencer.html';
-
+import '../parametres/parametres';
 
 
 //changer la couleur de fond du body
@@ -29,3 +29,12 @@ Template.home.showNextQuote = function() {
     .delay(2000)
     .fadeOut(2000, Template.home.showNextQuote);
 }
+
+Template.montagne.rendered = function(){
+    $('body').addClass('purple');
+}
+
+Template.home.helpers({
+    'fond': function(){
+    }
+})
