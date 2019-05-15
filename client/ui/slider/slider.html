@@ -1,6 +1,10 @@
 <template name="slider">  
+        <div class="container" id='sliderValueField'><br>        
+        </div>
     <div class="sliderWrapper">
-        <input id="rangeSlider" type="range" min="0" max="10" step="1">
-        <p id="sliderValueField"></p><br>
+        <div id="sliderValueField"></div>
+        <input id="rangeSlider" type="range" min="0" max="10" step="1" list='tickmarks'>
+        <br>
     </div>
+
 </template>

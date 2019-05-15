@@ -1,6 +1,6 @@
 <template name="journal">
     {{> menuBtn}}
-    <div class="modal">
+    <!-- <div class="modal">
         <div class="modal-background"></div>
         <div class="modal-card">
             <article class="message is-warning">
@@ -52,5 +52,21 @@
                 <div class="card-list"></div>
             </div>
         </div>
-    </section> 
+    </section>  -->
+
+    <div class='container'>
+        <div class="container">
+            <form action="">
+                <h3 id='h3css'>JOURNAL</h3>
+                <input id='inputTitre' class='inputJN' type="text" placeholder="Titre" />
+                <textarea id='inputNote' class='inputJN' rows='4' cols='50' placeholder="Qu'est-ce qui a bien été aujourd'hui ?"></textarea>
+                <button id='submitJN' type="submit" class='btn-primary btn'>Ajouter</button>
+            </form>
+        </div>
+    </div>
+    <div class='container'>
+        <div class="container afficher journal">
+            {{printJournal}}
+        </div>
+    </div>
 </template>

@@ -8,4 +8,39 @@
 }
 .card-form {
     margin-bottom: 150px;
-}
+};
+
+
+.container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  form {
+    position: relative;
+    width: 100%;
+    margin: 50px auto;
+    padding: 50px;
+    background: white;
+    text-align: center;
+  } 
+  
+  .inputJN {
+    display: inline-block;
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px;
+    border: 2px dashed lightblue;
+    outline: none;
+    font-size: 20px;
+    font-family: 'Economica', 'Arial', sans-serif;
+    font-weight: 400;
+    transition: all 0.2s ease;
+  }
+  
+  .inputJN:focus { border-color: deepskyblue; }
+  
+  #h3css {
+    color: darkslategray;
+  }
