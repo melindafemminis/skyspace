@@ -12,10 +12,13 @@ Template.slider.events({
       document.getElementById("sliderValueField").innerHTML= event.target.value;
       // Change la classe des 2 bouttons pour les afficher
       //Ajouter une condition pour savoir sur quelle page on est pour ne pas activer le bouton de la fin !
-      document.getElementById("sliderNextButton").removeAttribute('class', 'disabled');
-      document.getElementById("sliderNextButton").setAttribute('class', 'btn btn-secondary');
-      document.getElementById("sliderNextButton2").removeAttribute('class', 'disabled');
-      document.getElementById("sliderNextButton2").setAttribute('class', 'btn btn-secondary');
+
+      if(document.getElementById("sliderNextButton2") == null){
+        document.getElementById("sliderNextButton").disabled = false;
+      }
+      if(document.getElementById("sliderNextButton") == null){
+        document.getElementById("sliderNextButton2").disabled = false;
+      }
     }
   })
 

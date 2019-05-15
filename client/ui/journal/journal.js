@@ -94,11 +94,12 @@ Template.journal.events({
     'click #submitJN'(event, instance) {
         event.preventDefault();
         //Insérer le titre + la note dans la collection journal
-        journal.insert({
-            titre: document.getElementById("inputTitre").value,
-            note: document.getElementById("inputNote").value,
-            createdAt: new Date()
-        });
+        Meteor.call(
+            "addNote",
+            document.getElementById('inputTitre').value,
+            document.getElementById('inputNote').value,
+            new Date()
+        )
         //Clear les 2 inputs titre et note
         document.getElementById('inputTitre').value = '';
         document.getElementById('inputNote').value = '';
