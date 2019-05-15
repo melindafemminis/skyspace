@@ -24,7 +24,7 @@ Template.final.helpers({
             "Le pessimiste voit la difficulté dans chaque opportunité. L’optimiste voit une opportunité dans chaque difficulté",
             "Notre plus grande gloire n’est pas de jamais tomber, mais de se relever chaque fois que nous tombons",
             "10% de ta vie sont ce qui t’arrive, 90% comme tu y réagis",
-    ]
+        ]
 
         let quotesNegativ = [
             "La vitesse à laquelle tu avances n’a pas d’importance tant que tu ne t’arrête pas",
@@ -35,9 +35,10 @@ Template.final.helpers({
             "Pour pouvoir contempler un arc-en-ciel, il faut d’abord endurer la pluie",
             "L’échec est l’épice qui donne sa saveur au succès",
         ]
+        
+        console.log(humeurDebut.find().hint( { $natural : -1 } ).sort( {field : 1/-1 }).limit(1));
 
-
-        if(humeurDebut<humeurFin){
+        if(humeurDebut[humeurDebut.length -1]<humeurFin[humeurFin.length -1]){
             return quotesPositiv[Math.floor(Math.random() * quotesPositiv.length)];
         }else {
             return quotesNegativ[Math.floor(Math.random() * quotesNegativ.length)];

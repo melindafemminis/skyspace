@@ -7,7 +7,6 @@ import '../soundPlayer/soundPlayer';
 //////////////////////////////////////////////////////////////////
 // R E T O U R   A C C E U I L
 //////////////////////////////////////////////////////////////////
-// J'aimerais ici faire plutot un retour au menu ouvert
 
 Template.parametres.events({
     'click #retour'(event, instance){
