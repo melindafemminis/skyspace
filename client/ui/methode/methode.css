@@ -9,4 +9,5 @@
 .containerMethod{
     overflow: auto;
     max-height: 80vh;
+    margin-left:300px;
 }

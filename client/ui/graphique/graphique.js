@@ -10,12 +10,9 @@ import '../../../node_modules/chart.js/dist/Chart.bundle.min';
 /// C O U L E U R   F O N D
 ////////////////////////////////////////////////////////////////////////////////////
 
-// Template.graphique.rendered = function(){
-//     $('body').addClass('nuit');
-// }
-
-
-
+Template.graphique.rendered = function(){
+     $('body').addClass('nuit');
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////////

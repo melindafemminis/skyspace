@@ -1,6 +1,10 @@
 import './feedback.html';
 import './feedback.css';
 
+Template.feedback.rendered = function(){
+  $('body').addClass('nuit');
+}
+
 Template.feedback.events({
   'click #submitFB'(event, instance) {
     event.preventDefault();

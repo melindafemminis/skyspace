@@ -1,6 +1,6 @@
 import './montagne.html';
 
-Template.fondmethode.rendered = function(){
+Template.fondMethode.rendered = function(){
     $('body').addClass('nuit');
 }
 

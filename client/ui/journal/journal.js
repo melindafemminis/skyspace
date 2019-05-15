@@ -2,7 +2,9 @@ import './journal.html';
 import './journal.css';
 import '../home/homeFond.html';
 
-
+Template.journal.rendered = function(){
+    $('body').addClass('nuit');
+}
 
 // Template.journal.events({
 //     'click .modal'(event, instance){

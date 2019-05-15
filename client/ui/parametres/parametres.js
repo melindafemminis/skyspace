@@ -2,7 +2,9 @@ import './parametres.html';
 import './parametres.css';
 import '../soundPlayer/soundPlayer';
 
-
+Template.parametres.rendered = function(){
+    $('body').addClass('nuit');
+}
 
 //////////////////////////////////////////////////////////////////
 // R E T O U R   A C C E U I L

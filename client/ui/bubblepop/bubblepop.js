@@ -1,6 +1,10 @@
 import './bubblepop.html';
 import './bubblepop.css';
 
+Template.bubblepop.rendered = function(){
+    $('body').addClass('nuit');
+}
+
 console.clear();
 var maxBubbles = 25; //25
 var container = document.querySelector('.demo');

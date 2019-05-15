@@ -2,6 +2,10 @@ import './final.html';
 import './final.css';
 import '../home/homeFond.html';
 
+Template.final.rendered = function(){
+    $('body').removeClass('nuit');
+    Template.home.showNextQuote();
+}
 
 Template.final.events({
     'click #recommencer'(event, instance) {
