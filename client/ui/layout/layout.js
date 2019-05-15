@@ -16,3 +16,4 @@ import '../sliderBtn2/sliderBtn2';
 import '../journal/journal';
 import '../soundPlayer/soundPlayer';
 import '../final/final';
+
