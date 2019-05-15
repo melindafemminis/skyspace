@@ -1,4 +1,4 @@
-.section {
+/* .section {
     padding: 50px 0;
     margin: 0 auto;
     max-width: 70%;
@@ -8,7 +8,7 @@
 }
 .card-form {
     margin-bottom: 150px;
-};
+}; */
 
 
 .container {
@@ -43,4 +43,8 @@
   
   #h3css {
     color: darkslategray;
+  }
+
+  p {
+    color: darkslategrey;
   }
