@@ -12,10 +12,6 @@ Template.fond.rendered = function(){
     Template.home.showNextQuote();
 }
 
-Template.montagne.rendered = function(){
-    $('body').addClass('purple');
-}
-
 
 Template.home.events({
     'click #startMethod'(event, instance) {

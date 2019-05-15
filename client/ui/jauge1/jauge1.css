@@ -1,7 +1,8 @@
-.text-center {
-    font-family: "Montserrat";
+.sentir{
+    padding-bottom: 5%;
+    padding-top:4%;
+    color: #0E2337; 
 }
-
 
 #sliderNextButton{
     background-color:#245582!important;

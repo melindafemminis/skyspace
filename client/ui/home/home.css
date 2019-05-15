@@ -2,7 +2,7 @@
     font-family: 'Montserrat';   
 }
 
-#titre{
+.titre{
     color: #245582 ;
     letter-spacing: 5px;
     padding: 7% 0% 2%;
@@ -15,8 +15,8 @@
     color: #8F7E5D ;
     letter-spacing: 2px;
     background-color: #FFE9BE;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin: auto;
+    width: 550px;
 }
 
 .commencer:hover{
@@ -34,7 +34,7 @@
     display: none;
     width:100%;
     text-align:center;
-    margin-top:80px;
+    margin-top:100px;
     font-size:24px;
     color:#245582;
 }
