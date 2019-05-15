@@ -21,7 +21,7 @@
       radial-gradient(1px 1px at 160px 120px, #ddd, rgba(0,0,0,0));
     background-repeat: repeat;
     background-size: 200px 200px;
-    animation: zoom 100s infinite;
+    animation: zoom 30s infinite;
     opacity: 0;
   }
   

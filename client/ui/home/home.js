@@ -3,7 +3,8 @@ import './homeFond.html';
 import './commencer.html';
 import '../fondMontagne/montagne.html';
 import '../fondMontagne/montagneCommencer.html';
-import '../parametres/parametres';
+import '../parametres/parametres.js';
+import '../parametres/parametres.html';
 
 
 //changer la couleur de fond du body
@@ -34,7 +35,6 @@ Template.montagne.rendered = function(){
     $('body').addClass('purple');
 }
 
-Template.home.helpers({
-    'fond': function(){
-    }
-})
+Template.home.rendered = function(){
+
+}

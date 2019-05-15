@@ -11,8 +11,8 @@
     color:#41449A;
     letter-spacing: 2px;
     background-color:white;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin: auto;
+    width: 550px;
 }
 
 .commencer:hover{
