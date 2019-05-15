@@ -6,10 +6,11 @@ Template.sliderBtn2.events({
     'click #sliderNextButton2'(event, instance) {
       event.preventDefault();
       //Insérer la valeur du slider + date dans la collection humeurFin
-      humeurFin.insert({
-        value: document.getElementById("rangeSlider").value,
-        createdAt: new Date()
-      })
+      Meteor.call(
+        "addH2",
+        document.getElementById("rangeSlider").value,
+        new Date()
+    )
       //Simple console log de la valeur du slider pour voir que ça marche
       console.log(document.getElementById("rangeSlider").value);
       //Changer de page 

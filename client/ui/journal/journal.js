@@ -90,6 +90,10 @@ Template.journal.rendered = function(){
 //     }
 // );
 
+//Idée d'un code pour le journal ?
+//1. Céér la collection journal (dans both/collections.js)
+//2. Ajouter les notes dans la collection via une méthode (aussi ds collection, appelée depuis ici)
+//3. Afficher la collection ?
 Template.journal.events({
     'click #submitJN'(event, instance) {
         event.preventDefault();

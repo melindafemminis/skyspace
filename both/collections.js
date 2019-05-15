@@ -9,7 +9,24 @@ journal = new Mongo.Collection('journal');
 
 
 
+
+////////////////////////////////////////////////////////////////////////
+// CLEAR COLLECTION
+////////////////////////////////////////////////////////////////////////
+
 Meteor.methods({
+    'clearHumeurs'({}) {
+        humeurDebut.remove({});
+        humeurFin.remove({});
+    }
+  });
+
+
+////////////////////////////////////////////////////////////////////////
+// INSERT
+////////////////////////////////////////////////////////////////////////
+
+  Meteor.methods({
     "addNote": function(titre, note, date){
         journal.insert({
             titre: titre,
@@ -17,4 +34,40 @@ Meteor.methods({
             createdAt: date
         })
     }
+})
+
+Meteor.methods({
+    "addH1": function(note, date){
+        humeurDebut.insert({
+            note: note,
+            createdAt: date
+        })
+    }
+})
+
+Meteor.methods({
+    "addH2": function(note, date){
+        humeurFin.insert({
+            note: note,
+            createdAt: date
+        })
+    }
+})
+
+
+
+////////////////////////////////////////////////////////////////////////
+// S E N D   F E E D B A C K
+////////////////////////////////////////////////////////////////////////
+
+//voir docs.meteor.com Email-send
+
+Meteor.startup(function () {
+    process.env.MAIL_URL = "smtps://postmaster%40<postmaster@sandbox87999e20aa7c430788855daf04dcc1f5.mailgun.org>.mailgun.org:ad9f006dd482b0042cbb309b86ce331f-6140bac2-c87d69e2@smtp.mailgun.org:587";
+});
+
+Meteor.methods({
+    'sendEmail'({}) {
+        Email.send({to, from, subject, text });
+}
 })
