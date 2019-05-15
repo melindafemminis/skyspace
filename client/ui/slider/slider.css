@@ -3,7 +3,7 @@
 .sliderWrapper {
     display: inline-block;
     width: 20px;
-    height: 150px;
+    height: 200px;
     padding: 0;
   }
   
@@ -14,7 +14,7 @@
     transform-origin: 75px 75px;
     transform: rotate(-90deg);
   }
+
   
 #sliderValueField {
-  margin-top: 150px;
 }

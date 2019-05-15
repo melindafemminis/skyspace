@@ -35,10 +35,8 @@ Template.final.helpers({
             "Pour pouvoir contempler un arc-en-ciel, il faut d’abord endurer la pluie",
             "L’échec est l’épice qui donne sa saveur au succès",
         ]
-        
-        console.log(humeurDebut.find().hint( { $natural : -1 } ).sort( {field : 1/-1 }).limit(1));
 
-        if(humeurDebut[humeurDebut.length -1]<humeurFin[humeurFin.length -1]){
+        if(humeurDebut<humeurFin){
             return quotesPositiv[Math.floor(Math.random() * quotesPositiv.length)];
         }else {
             return quotesNegativ[Math.floor(Math.random() * quotesNegativ.length)];
