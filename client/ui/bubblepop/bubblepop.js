@@ -18,6 +18,7 @@ Template.bubblepop.events({
         game.start();
         //Pourquoi ça ne fonctionne pas avec document.getElementById('create').hide(); ?
         $('#create').hide();
+        $('#texteBubble').hide();
     }
 });
 
@@ -44,7 +45,7 @@ var Game = function(options) {
             }, Math.floor(Math.random() * this.duration - 19000) + 0);
         };
 
-        //Mettre un temps maximum (looong) pour le jeu
+        //Mettre un temps maximum pour le jeu
         var seconds_left = this.duration / 1000;
         var interval = setInterval(function() {
             $('#timer_div').html(--seconds_left);
@@ -76,8 +77,8 @@ function Bubble() {
     //Animation
     this.animate = function() {
       $("#bubble-" + this.id).animate({
-        top: -90,
-      }, Math.floor(Math.random() * 25000) + 6000)
+        top: -100,
+      }, Math.floor(Math.random() * 25000) + 8000)
     }
 
     this.blow = function() {
