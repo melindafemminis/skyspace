@@ -12,6 +12,8 @@
   }
   
   .overlay-content {
+    overflow: auto;
+    max-height: 80vh;
     position: relative;
     top: 12%;
     width: 100%;
