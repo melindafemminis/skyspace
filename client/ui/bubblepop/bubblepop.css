@@ -24,3 +24,8 @@
 #create {
     margin: 0 auto;
 }
+
+.avertissement{
+  color: white;
+  text-align: center;
+}
