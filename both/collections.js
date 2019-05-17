@@ -71,3 +71,9 @@ Meteor.methods({
         Email.send({to, from, subject, text });
 }
 })
+
+Meteor.methods({
+    'deleteNote'({}) {
+        journal.remove({});
+    }
+});

@@ -1,27 +1,14 @@
-/* .section {
-    padding: 50px 0;
-    margin: 0 auto;
-    max-width: 70%;
-}
-.card {
-    margin-bottom: 20px;
-}
-.card-form {
-    margin-bottom: 150px;
-}; */
-
-
 .container {
     position: relative;
     width: 80%;
     margin: 0 auto;
   }
   
-  form {
+  .journalDesign {
     position: relative;
     width: 100%;
     margin: 50px auto;
-    padding: 50px;
+    padding: 40px;
     background: white;
     text-align: center;
   } 
@@ -40,11 +27,11 @@
   }
   
   .inputJN:focus { border-color: deepskyblue; }
-  
-  #h3css {
-    color: darkslategray;
+
+  p{
+    color: darkslategrey;
   }
 
-  p {
-    color: darkslategrey;
+  h3 {
+    padding: 20px;
   }

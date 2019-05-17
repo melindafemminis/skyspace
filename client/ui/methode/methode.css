@@ -9,5 +9,7 @@
 .containerMethod{
     overflow: auto;
     max-height: 80vh;
-    margin-left:300px;
+}
+.texteMethode{
+    color: #F0FBFF;
 }
