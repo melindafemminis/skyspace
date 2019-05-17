@@ -25,14 +25,15 @@
     margin: 0 auto;
 }
 
-h3 {
+h3, .avertissement {
     color: white;
     max-width: 450px;
     margin: 0 auto;
     padding-top: 100px;
     padding-bottom: 100px;
 }
-.avertissement{
+
+/* .avertissement {
   color: white;
   text-align: center;
-}
+} */
