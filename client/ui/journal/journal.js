@@ -28,6 +28,18 @@ Template.journal.events({
     }
 );
 
+Template.journal.events({
+    'click #deleteButton': function(){
+        if (confirm('Veux-tu vraiment effacer la note ?')){
+            Meteor.call('deleteNote', {}, (err, res) => {
+                if (err) {
+                  alert(err);
+                } else {
+                }
+            });
+        }
+    }
+})
 Template.journal.deleteIt = function(a,e){
     $(a).parent().fadeOut();
     journal.remove(e);
