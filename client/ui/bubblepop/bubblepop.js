@@ -1,6 +1,7 @@
 import './bubblepop.html';
 import './bubblepop.css';
 
+
 //Pour le fond CSS
 Template.bubblepop.rendered = function(){
     $('body').addClass('nuit');

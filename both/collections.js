@@ -26,7 +26,7 @@ Meteor.methods({
 // INSERT
 ////////////////////////////////////////////////////////////////////////
 
-  Meteor.methods({
+Meteor.methods({
     "addNote": function(titre, note, date){
         journal.insert({
             titre: titre,
@@ -56,8 +56,28 @@ Meteor.methods({
 
 
 
+
+
 ////////////////////////////////////////////////////////////////////////
-// S E N D   F E E D B A C K
+// EFFACER 1 NOTE
+////////////////////////////////////////////////////////////////////////
+
+Meteor.methods({
+    "deleteNote": function(){
+        console.log('ça marche on va enlever.');
+        //Supprimer l'article de la collection. Comment selctionner ID ?
+        //journal.remove({_id: );
+    }
+});
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////
+// SEND FEEDBACK
 ////////////////////////////////////////////////////////////////////////
 
 //voir docs.meteor.com Email-send
@@ -71,9 +91,3 @@ Meteor.methods({
         Email.send({to, from, subject, text });
 }
 })
-
-Meteor.methods({
-    'deleteNote'({}) {
-        journal.remove({});
-    }
-});
