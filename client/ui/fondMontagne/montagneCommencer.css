@@ -25,3 +25,12 @@
     padding-bottom: 2%;
     max-height: auto;
 }
+
+.citationMontagne{
+    display: none;
+    width:100%;
+    text-align:center;
+    margin-top:100px;
+    font-size:24px;
+    color:white;
+}
