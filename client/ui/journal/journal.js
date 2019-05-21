@@ -33,7 +33,7 @@ Template.journal.events({
     //Supprimer une note
     'click #deleteButton': function(){
         if (confirm('Veux-tu vraiment effacer la note ?')){
-            Meteor.call("deleteNote")
+            Meteor.call("deleteNote", this._id);
         } else {
             console.log('Ok on ne la supprime pas alors.');
         }

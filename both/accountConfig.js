@@ -8,7 +8,7 @@ T9n.setLanguage('fr');
 let email = AccountsTemplates.removeField('email');
 let password = AccountsTemplates.removeField('password');
 
-//Ajouter un champ au formulaire
+//Ajouter un champ au formulaire (=le pseudo)
 //Voir documentation officielle de user-accounts pour toutes les possiblités
 AccountsTemplates.addField({
     _id: 'pseudo',
@@ -21,7 +21,7 @@ AccountsTemplates.addField({
 });
 
 //Longeur minimale du mot de passe dans meteor, min is 6 caractères
-//Modifier la longueur pour aller plus vite
+//Modifier la longueur pour aller plus viiiiite dans les tests
 password.minLength = 3;
 
 //Ajouter les champs retirés au début, maintenant APRES le champ pseudo

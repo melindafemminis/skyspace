@@ -11,7 +11,7 @@ journal = new Mongo.Collection('journal');
 
 
 ////////////////////////////////////////////////////////////////////////
-// CLEAR COLLECTION
+// CLEAR HUMEURS COLLECTION
 ////////////////////////////////////////////////////////////////////////
 
 Meteor.methods({
@@ -63,10 +63,9 @@ Meteor.methods({
 ////////////////////////////////////////////////////////////////////////
 
 Meteor.methods({
-    "deleteNote": function(){
+    "deleteNote": function(a){
         console.log('ça marche on va enlever.');
-        //Supprimer l'article de la collection. Comment selctionner ID ?
-        //journal.remove({_id: );
+        journal.remove({a});
     }
 });
 
@@ -81,6 +80,7 @@ Meteor.methods({
 ////////////////////////////////////////////////////////////////////////
 
 //voir docs.meteor.com Email-send
+//Ca marche pas
 
 Meteor.startup(function () {
     process.env.MAIL_URL = "smtps://postmaster%40<postmaster@sandbox87999e20aa7c430788855daf04dcc1f5.mailgun.org>.mailgun.org:ad9f006dd482b0042cbb309b86ce331f-6140bac2-c87d69e2@smtp.mailgun.org:587";
