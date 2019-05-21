@@ -1,14 +1,13 @@
 
 <template name='home'>
-<!--
-    {{>montagne}}
-    {{>montagneCommencer}}
---> 
 
-    
-  
-    {{>fond}}
-    {{>commencer}}
+    {{#if radioChecked}}
+        {{>montagne}}
+        {{>montagneCommencer}}
+    {{else}}
+        {{>fond}}
+        {{>commencer}}
+    {{/if}}
 
 
 </template>

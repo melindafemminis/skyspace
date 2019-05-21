@@ -35,6 +35,9 @@ Template.montagne.rendered = function(){
     $('body').addClass('purple');
 }
 
-Template.home.rendered = function(){
+Template.home.helpers({
+    radioChecked(){
+        return document.getElementById("radioFond").checked;
+    }
+});
 
-}
