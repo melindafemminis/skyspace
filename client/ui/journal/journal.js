@@ -34,6 +34,7 @@ Template.journal.events({
     'click #deleteButton': function(){
         if (confirm('Veux-tu vraiment effacer la note ?')){
             Meteor.call("deleteNote", this._id);
+            console.log(this._id)
         } else {
             console.log('Ok on ne la supprime pas alors.');
         }
@@ -47,22 +48,23 @@ Template.journal.events({
 ////////////////////////////////////////////////////////////////////////
 
 
-Template.journal.readDB = function(){
-    var tableau = [];
-    journal.find({},{sort:[['createdAt', 'desc']]}).forEach( function(myDoc) { tableau.push(myDoc ); } );
-    var html = '';
-    for (let index = 0; index < tableau.length; index++) {
-        const element = tableau[index];
-        if(element != null && element.note != null)
-            html += '<div class="journalDesign"><h3 id="h3css">'+element.titre +'</h3><p>'+element.note+'</p><a style="color:red !important;cursor:pointer;" id="deleteButton" >supprimer</a></div>';
-    }
-    if(document.getElementById('previusJournal'))
-        document.getElementById('previusJournal').innerHTML = html;
-};
+// Template.journal.readDB = function(){
+//     var tableau = [];
+//     journal.find({},{sort:[['createdAt', 'desc']]}).forEach( function(myDoc) { 
+//         tableau.push(myDoc ); 
+//     } );
+//     var html = '';
+//     for (let index = 0; index < tableau.length; index++) {
+//         const element = tableau[index];
+//         if(element != null && element.note != null)
+//             html += '<div class="journalDesign"><h3 id="h3css">'+element.titre +'</h3><p>'+element.note+'</p><a style="color:red !important;cursor:pointer;" id="deleteButton" >supprimer</a></div>';
+//     }
+//     if(document.getElementById('previusJournal'))
+//         document.getElementById('previusJournal').innerHTML = html;
+// };
 
 Template.journal.helpers({
-    'printJournal': function(){
-        setTimeout(function(){Template.journal.readDB();},500);
-        
+    'jounralEntry': function(){
+        return journal.find({})
     }
 })
