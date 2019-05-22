@@ -25,7 +25,7 @@ Template.final.events({
 
 Template.final.helpers({
     'choose': function(){
-        let quotesPositiv = [
+        let quotesFinal= [
             "Oublie ce qui t’as blessé mais n’oublie pas ce que cela t’as appris",
             "Ces erreurs et ces fautes sont ce que je suis, dessinant les plus belles étoiles dans la constellation de ma vie",
             "N’aie pas peur d’échouer, aie peur de ne pas essayer",
@@ -33,9 +33,6 @@ Template.final.helpers({
             "Le pessimiste voit la difficulté dans chaque opportunité. L’optimiste voit une opportunité dans chaque difficulté",
             "Notre plus grande gloire n’est pas de jamais tomber, mais de se relever chaque fois que nous tombons",
             "10% de ta vie sont ce qui t’arrive, 90% comme tu y réagis",
-        ]
-
-        let quotesNegativ = [
             "La vitesse à laquelle tu avances n’a pas d’importance tant que tu ne t’arrête pas",
             "La seule fois que tu devrais regarder derrière toi est pour voir le chemin que tu as fait",
             "Voir c’est savoir, vouloir c’est pouvoir, oser c’est avoir",
@@ -44,11 +41,7 @@ Template.final.helpers({
             "Pour pouvoir contempler un arc-en-ciel, il faut d’abord endurer la pluie",
             "L’échec est l’épice qui donne sa saveur au succès",
         ]
-
-        if(humeurDebut<humeurFin){
-            return quotesPositiv[Math.floor(Math.random() * quotesPositiv.length)];
-        }else {
-            return quotesNegativ[Math.floor(Math.random() * quotesNegativ.length)];
+      return quotesFinal[Math.floor(Math.random() * quotesFinal.length)];
+    
         }
-    }
-});
+    });
