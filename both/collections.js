@@ -81,11 +81,11 @@ Meteor.methods({
 Meteor.methods({
     "changeMusic": function(userId){
         if(typeof Meteor.users.findOne(userId).music == "undefined"){
-            console.log('le Meteor.user.music returns true');
-            Meteor.users.update( { $set: { _id: userId } }, { $set: { music: false } })
+            console.log('lcondition return true');
+            userParametres.update( { $set: { id: userId } }, { $set: { music: false } })
         } else {
             console.log('le Meteor.user.music returns false');
-            Meteor.users.update( { $set: { _id: userId } }, { $set: { music: true } })
+            userParametres.update( { $set: { _id: userId } }, { $set: { music: true } })
         }
     }
 });

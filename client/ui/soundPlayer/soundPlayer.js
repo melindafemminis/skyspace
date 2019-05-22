@@ -2,19 +2,26 @@ import '../parametres/parametres.html';
 
 
 //fonction qui permet de commencer la musique si on n'a pas mute.
-//Si le navigateur empeche de commencer la musique, on a un catch, et donc on mute la musique. Ainsi l'utilisateur verra que la musique est mute est en cliquant sur le bouton de musique, la navigateur acceptera cette fois de lancer la musique car c'est l'utilisateur qui le demande et non l'automatisme javascript
+//Si le navigateur empeche de commencer la musique, on a un catch, et donc on mute la musique. 
+//Ainsi l'utilisateur verra que la musique est mute est en cliquant sur le bouton de musique, 
+//la navigateur acceptera cette fois de lancer la musique car c'est l'utilisateur qui le demande et 
+//non l'automatisme javascript
 Template.fond.audioPlay = function(){
     if(!Template.fond.isMute)
-        Template.fond.audio.play().catch(function(){ //catch est une fonction qui s'execute après quelques milli secondes.
+        Template.fond.audio.play().catch(function(){ //catch est une fonction qui s'execute après 
+        //quelques milli secondes.
             Template.fond.isMute = true;
         });
 }
 
 
-//fonction qui est appelée à chaque démarrage d'une page, elle lit l'url et regarde en fonction où il faut dans le temps démarrer la musique et si c'est mute ou non.
+//fonction qui est appelée à chaque démarrage d'une page, elle lit l'url et regarde en fonction où 
+//il faut dans le temps démarrer la musique et si c'est mute ou non.
 //Cette fonction ajoute aussi le bouton du volume, en javascript.
-//Il nous est arrivé que le navigateur refuse de lancer automatiquement la musique à cause de la sécurité quand la page charge pour la première fois.
-//Dans ce cas il suffit que l'on fasse comme si le son était mute, c'est alors à l'utilisateur de démarrer la musique.
+//Il nous est arrivé que le navigateur refuse de lancer automatiquement la musique à cause de la 
+//sécurité quand la page charge pour la première fois.
+//Dans ce cas il suffit que l'on fasse comme si le son était mute, c'est alors à l'utilisateur de 
+//démarrer la musique.
 Template.fond.audioAutoStart = function(){
 
     //ici on lit l'url et les paramètres.
@@ -39,7 +46,8 @@ Template.fond.audioAutoStart = function(){
 
     Template.fond.audioPlay(); //on joue la musique
 
-    //setTimeout permet de démarrer ce javascript 200 millisecondes plus tard afin de laisser le temps au catch de audioPlay de se lancer si besoin et de mute la musique
+    //setTimeout permet de démarrer ce javascript 200 millisecondes plus tard afin de laisser 
+    //le temps au catch de audioPlay de se lancer si besoin et de mute la musique
     setTimeout(function(){
         //ici on créé un element <img> que l'on ajoute au body
         //cet element est notre bouton d'image.
@@ -59,8 +67,10 @@ Template.fond.audioAutoStart = function(){
 
 }
 
-//ici on défini isMute par défaut comme étant non muté, pour tenter de démarrer la musique automatiquement si le navigateur l'accepte.
+//ici on défini isMute par défaut comme étant non muté, pour tenter de démarrer la musique 
+//automatiquement si le navigateur l'accepte.
 Template.fond.isMute = false;
+
 //cette fonction permet de mute ou démuté la musique.
 Template.fond.audioMute = function(){
     if(Template.fond.isMute){
