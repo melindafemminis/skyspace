@@ -14,7 +14,7 @@ L'idée de *SkySpace* est de proposer une solution d'aide d'urgence disponible e
 Après avoir noté son niveau de stress avant et après chaque utilisation de la méthode, il est possible de visualiser ces données sous forme de grahpique pour comprendre quand les crises arrivent et à quel point cette méthode spécifique est efficace. 
 L'app contient des informations sur le principe des <i>grouding methods</i> et quelques conseils pour gérer les crises.
 
-##Interface
+## Interface
  
  L'app est composée par une méthode centrale et plusieurs options complémentaire dans le menu:
   * L'utilisateur·trice arrive sur une page d'accueil sur laquel sur trouve le bouton "commencer" afin de lancer la méthode 5-4-3-2-1 sans attendre. Une musique relaxante accompagne toute l'app et est par défaut mise sous silencieux.
