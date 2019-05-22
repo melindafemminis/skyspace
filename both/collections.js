@@ -65,7 +65,7 @@ Meteor.methods({
 Meteor.methods({
     "deleteNote": function(a){
         console.log('ça marche on va enlever.');
-        journal.remove({a});
+        journal.remove(a);
     }
 });
 
