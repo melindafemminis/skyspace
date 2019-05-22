@@ -4,7 +4,6 @@
     width: 10%;
     margin-top: 1em;
 }
-/* CSS pour les switch parce que je n'ai pas trouvé comment le faire en bootstrap*/
 
 .params {
       margin: 40px;
@@ -19,4 +18,14 @@ h3 {
 
 .config input {
     margin-left: 90%;
+}
+
+#logoRetour {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#logoRetour:hover {
+    background: rgba(255, 255, 255, 1);
 }

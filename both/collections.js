@@ -65,7 +65,7 @@ Meteor.methods({
 ////////////////////////////////////////////////////////////////////////
 
 Meteor.methods({
-    "deleteNote": function(a){
+    "deleteNote": function (a) {
         console.log('ça marche on va enlever.');
         journal.remove(a);
     }
@@ -78,15 +78,11 @@ Meteor.methods({
 // BOUTONS PARAMETRES
 ////////////////////////////////////////////////////////////////////////
 
-Meteor.methods({
-    "changeMusic": function(userId){
-        if(typeof Meteor.users.findOne(userId).music == "undefined"){
-            console.log('lcondition return true');
-            userParametres.update( { $set: { id: userId } }, { $set: { music: false } })
-        } else {
-            console.log('le Meteor.user.music returns false');
-            userParametres.update( { $set: { _id: userId } }, { $set: { music: true } })
-        }
-    }
-});
 
+Meteor.methods ( {
+    "changeMusic": function (a) {
+        let userId = Meteor.user()._id;
+         var isChecked = a.checked;
+         Meteor.users.update ( { _id: userId }, { "profile.isChecked": isChecked } );
+    }
+})

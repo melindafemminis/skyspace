@@ -1,13 +1,16 @@
 <template name='parametres'>
-        {{> fondMethode}}  
-        <!--importer les fonts-->  
-        <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">    
-        <div id='retour'><a href="/"> <img class="col-md-3 img" style="background: rgba(255, 255, 255, 0.8);
-                border-radius: 5px;" src="/return.png" >
-               </a></div>        
-        <div class='container config'>
+        {{> fondMethode}} 
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet"> 
+           
+        <div id='retour'>
+                <img class="col-md-3 img" id='logoRetour' src="/return.png" >
+        </div> 
+
+        <div class='container config' id='configCont'>
 
                 <h3>Paramètres</h3>
+
                 <div id='musiqueParam' class='params'>
                         <label>Musique</label><br>
                         <input id="radioMusic" type="checkbox" checked>
