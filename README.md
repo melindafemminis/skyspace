@@ -19,6 +19,8 @@ autres méthodes du même type.
 
 <h2>Collections</h2>
 
+
+
 En construction ...
 
 <h2>Autre</h2>
