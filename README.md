@@ -14,11 +14,11 @@ L'idée de *SkySpace* est de proposer une solution d'aide d'urgence disponible e
 Après avoir noté son niveau de stress avant et après chaque utilisation de la méthode, il est possible de visualiser ces données sous forme de grahpique pour comprendre quand les crises arrivent et à quel point cette méthode spécifique est efficace. 
 L'app contient des informations sur le principe des <i>grouding methods</i> et quelques conseils pour gérer les crises.
 
-<h2>Interface<h2>
+##Interface
  
  L'app est composée par une méthode centrale et plusieurs options complémentaire dans le menu:
   * L'utilisateur·trice arrive sur une page d'accueil sur laquel sur trouve le bouton "commencer" afin de lancer la méthode 5-4-3-2-1 sans attendre. Une musique relaxante accompagne toute l'app et est par défaut mise sous silencieux.
-!.[fondDésert](https://github.com/adnilem/skyspace/blob/master/public/fondD%C3%A9sert.jpg)
+![fondDésert](https://user-images.githubusercontent.com/44426484/58166550-5aab0800-7c8a-11e9-877d-3faee09e3ba8.jpg)
   * Avant le début de la méthode à proprement parlé commence, l'utilisateur·trice juge de son état. Grâce à une seconde jauge à la fin, il est possible de visualiser l'efficacité de la méthode.
   ![jaugeDebut](https://user-images.githubusercontent.com/44426484/58164148-8d9ecd00-7c85-11e9-8391-e5c2cd42b5ae.jpg)
 * La méthode commence; l'utilisateur·trice est guidé dans le déroulement de la méthode.
@@ -26,9 +26,9 @@ L'app contient des informations sur le principe des <i>grouding methods</i> et q
 * En plus de la méthode, l'utilisateur·trice a accès à d'autres fonctions; ainsi, ielle peut accèder à un journal afin de verbaliser les points positifs de sa journée.
   ![journal](https://user-images.githubusercontent.com/44426484/58165019-31d54380-7c87-11e9-838d-46b59b1ced9e.jpg)
 * Grâce à un login, l'utilisateur·trice peut accéder à des fonctionnalités supplémentaires, comme un mini-jeu où il faut éclater des bulles.
-  ![bulles](https://user-images.githubusercontent.com/44426484/58165486-2fbfb480-7c88-11e9-8bd5-a90dc852359f.jpg)
-  
-  * L'app est également disponible en 2 thèmes: "Désert" ou "Montagne".
+  ![bulles](https://user-images.githubusercontent.com/44426484/58165486-2fbfb480-7c88-11e9-8bd5-a90dc852359f.jpg) 
+
+* L'app est également disponible en 2 thèmes: "Désert" ou "Montagne".
   ![fondMontagne](https://user-images.githubusercontent.com/44426484/58165531-40702a80-7c88-11e9-8662-07d25cd41cc5.jpg)
 
 
