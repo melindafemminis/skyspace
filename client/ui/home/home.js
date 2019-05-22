@@ -3,6 +3,7 @@ import './homeFond.html';
 import './commencer.html';
 import '../fondMontagne/montagne.html';
 import '../fondMontagne/montagneCommencer.html';
+import '../fondMontagne/montagneCommencer.css';
 import '../parametres/parametres.js';
 import '../parametres/parametres.html';
 
@@ -31,13 +32,16 @@ Template.home.showNextQuote = function() {
     .fadeOut(2000, Template.home.showNextQuote);
 }
 
-Template.montagne.rendered = function(){
-    $('body').addClass('purple');
-}
-
 Template.home.helpers({
     radioChecked(){
         return document.getElementById("radioFond").checked;
     }
 });
+
+Template.montagne.rendered = function(){
+    $('body').removeClass('nuit');
+    $('body').addClass('purple');
+    $('.citation').addClass('citationMontagne')
+    Template.home.showNextQuote();
+}
 

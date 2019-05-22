@@ -1,7 +1,8 @@
 
 <template name='home'>
 
-    {{#if radioChecked}}
+   <!--
+{{#if radioChecked}}
         {{>montagne}}
         {{>montagneCommencer}}
     {{else}}
@@ -9,5 +10,22 @@
         {{>commencer}}
     {{/if}}
 
+   --> 
+   
+   {{>montagne}}
+   {{>montagneCommencer}}
+
+   <div class="citations">
+    <h2 class="citation">88% des utilisateurs de Skyspace se sont sentis mieux après une utilisation</h2>
+    <h2 class="citation">"Grâce à SkySpace, je gère beaucoup mieux mon stress."</h2>
+    <h2 class="citation">Aujourd'hui, plus de 1200 utilisateurs ont géré leur crise d'angoisse.</h2>
+    <h2 class="citation">"Avec SkySpace sur mon smartphone, cela me permet de sortir l'esprit tranquille"</h2>
+    <h2 class="citation">Le mois dernier, c'est plus de 75% des gens qui ont contrôlé leur panique</h2>
+    <h2 class="citation">"Vous n'êtes pas seul, nous sommes des milliers comme vous à chercher une aide"</h2>
+    <h2 class="citation">Une méthode approuvée par de nombreux professionels</h2>
+    <h2 class="citation">Bravo ! Tu fais partie de ceux qui veulent agir contre l'angoisse</h2>
+    <h2 class="citation">De nombreuses personnes ont canalisé leur stress, pourquoi pas toi ?</h2>
+    <h2 class="citation">"En utilisant SkySpace, je canalise beaucoup mieux mes crises d'angoisse</h2>
+  </div>
 
 </template>
