@@ -15,9 +15,10 @@ Après avoir noté son niveau de stress avant et après chaque utilisation de la
 L'app contient des informations sur le principe des <i>grouding methods</i> et quelques conseils pour gérer les crises.
 
 <h2>Interface<h2>
+ 
  L'app est composée par une méthode centrale et plusieurs options complémentaire dans le menu:
   * L'utilisateur·trice arrive sur une page d'accueil sur laquel sur trouve le bouton "commencer" afin de lancer la méthode 5-4-3-2-1 sans attendre. Une musique relaxante accompagne toute l'app et est par défaut mise sous silencieux.
-![fondDésert](https://user-images.githubusercontent.com/44426484/58163394-3ba97780-7c84-11e9-8773-04e591c5f2a8.jpg)
+!.[fondDésert](https://github.com/adnilem/skyspace/blob/master/public/fondD%C3%A9sert.jpg)
   * Avant le début de la méthode à proprement parlé commence, l'utilisateur·trice juge de son état. Grâce à une seconde jauge à la fin, il est possible de visualiser l'efficacité de la méthode.
   ![jaugeDebut](https://user-images.githubusercontent.com/44426484/58164148-8d9ecd00-7c85-11e9-8391-e5c2cd42b5ae.jpg)
 * La méthode commence; l'utilisateur·trice est guidé dans le déroulement de la méthode.
@@ -33,8 +34,6 @@ L'app contient des informations sur le principe des <i>grouding methods</i> et q
 
 
 <h2>Collections</h2>
-
-
 
 En construction ...
 
