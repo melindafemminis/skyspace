@@ -18,17 +18,27 @@ L'app contient des informations sur le principe des <i>grouding methods</i> et q
  
  L'app est composée par une méthode centrale et plusieurs options complémentaire dans le menu:
   * L'utilisateur·trice arrive sur une page d'accueil sur laquel sur trouve le bouton "commencer" afin de lancer la méthode 5-4-3-2-1 sans attendre. Une musique relaxante accompagne toute l'app et est par défaut mise sous silencieux.
+  
 ![fondDésert](https://user-images.githubusercontent.com/44426484/58166550-5aab0800-7c8a-11e9-877d-3faee09e3ba8.jpg)
+
   * Avant le début de la méthode à proprement parlé commence, l'utilisateur·trice juge de son état. Grâce à une seconde jauge à la fin, il est possible de visualiser l'efficacité de la méthode.
+  
   ![jaugeDebut](https://user-images.githubusercontent.com/44426484/58164148-8d9ecd00-7c85-11e9-8391-e5c2cd42b5ae.jpg)
+  
 * La méthode commence; l'utilisateur·trice est guidé dans le déroulement de la méthode.
+
   ![jauge](https://user-images.githubusercontent.com/44426484/58164461-2e8d8800-7c86-11e9-9d57-60652f05154d.jpg)
+  
 * En plus de la méthode, l'utilisateur·trice a accès à d'autres fonctions; ainsi, ielle peut accèder à un journal afin de verbaliser les points positifs de sa journée.
+
   ![journal](https://user-images.githubusercontent.com/44426484/58165019-31d54380-7c87-11e9-838d-46b59b1ced9e.jpg)
+  
 * Grâce à un login, l'utilisateur·trice peut accéder à des fonctionnalités supplémentaires, comme un mini-jeu où il faut éclater des bulles.
+
   ![bulles](https://user-images.githubusercontent.com/44426484/58165486-2fbfb480-7c88-11e9-8bd5-a90dc852359f.jpg) 
 
 * L'app est également disponible en 2 thèmes: "Désert" ou "Montagne".
+
   ![fondMontagne](https://user-images.githubusercontent.com/44426484/58165531-40702a80-7c88-11e9-8662-07d25cd41cc5.jpg)
 
 
