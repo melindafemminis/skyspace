@@ -7,3 +7,10 @@ import { FlowRouter } from 'meteor/ostrio:flow-router-extra';
 if(Meteor.isDevelopment) {
     window.FlowRouter = FlowRouter;
 }
+
+// Array.from(document.querySelectorAll('[type=radio]'))
+//   .forEach(x => { 
+//     if (x.checked) { 
+//       x.setAttribute('checked', 'checked')
+//     }
+//   });
