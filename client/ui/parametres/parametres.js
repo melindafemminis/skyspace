@@ -7,6 +7,8 @@ Template.parametres.rendered = function(){
     $('body').addClass('nuit');
 }
 
+
+
 //////////////////////////////////////////////////////////////////
 // EVENTS 
 //////////////////////////////////////////////////////////////////
@@ -29,8 +31,8 @@ Template.parametres.events({
 
             console.log(event.target.checked);
 
-            //Appel d'une méthode qui sauvegarderait le state dans Meteor.users
-            Meteor.call('changeMusic',event.target);
+            //Appel d'une méthode qui sauve le state dans le profile de l'user
+            Meteor.call('musicOn',event.target);
 
         } else {
 
@@ -41,8 +43,8 @@ Template.parametres.events({
 
             console.log(event.target.checked);
 
-            //Appel d'une méthode qui sauvegarderait le state dans Meteor.users
-            Meteor.call('changeMusic',event.target);
+            //Appel d'une méthode qui sauve le state dans le profile de l'user
+            Meteor.call('musicOff',event.target);
         }
     },
 
@@ -51,7 +53,7 @@ Template.parametres.events({
     },
      
     'click #deleteDonnees' ( event, instance ) {
-        
+
         if (confirm('Effacer toutes les données ? Cette action est irréversible.')) {
             Meteor.call('clearHumeurs', {}, (err, res) => {
                 if (err) {
@@ -62,3 +64,22 @@ Template.parametres.events({
         } 
     }
 });
+
+
+
+
+
+//////////////////////////////////////////////////////////////////
+// HELPERS 
+//////////////////////////////////////////////////////////////////
+
+Template.parametres.helpers({
+    isChecked: function(){
+        if ( Meteor.user().profile.isChecked == 'isChecked' ) {
+            return 'The isChecked is actually checked';
+        } else {
+            return 'The isChecked is NOT checked';
+        }
+    }
+})
+

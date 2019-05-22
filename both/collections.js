@@ -80,9 +80,15 @@ Meteor.methods({
 
 
 Meteor.methods ( {
-    "changeMusic": function (a) {
+    "musicOn": function (a) {
         let userId = Meteor.user()._id;
-         var isChecked = a.checked;
-         Meteor.users.update ( { _id: userId }, { "profile.isChecked": isChecked } );
+        Meteor.users.update ( { _id: userId }, { $set: { "profile.isChecked": 'isChecked' } } );
+    }
+})
+
+Meteor.methods ( {
+    "musicOff": function (a) {
+        let userId = Meteor.user()._id;
+        Meteor.users.update ( { _id: userId }, { $set: { "profile.isChecked": 'notChecked' } } );
     }
 })
