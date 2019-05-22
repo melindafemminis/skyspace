@@ -68,6 +68,7 @@ Template.journal.events({
 
 Template.journal.helpers({
     'jounralEntry': function(){
-        return journal.find({})
+        return journal.find({},{sort:[['createdAt', 'desc']]})
     }
+    
 })
