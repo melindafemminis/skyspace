@@ -76,13 +76,13 @@ function Bubble() {
     this.id = game.bubblesArr.length;
     //Animation
     this.animate = function() {
-      $("#bubble-" + this.id).animate({
-        top: -100,
-      }, Math.floor(Math.random() * 25000) + 8000)
+      $("#bubble-" + this.id).animate(
+        { top: -100,}
+        , Math.floor(Math.random() * 25000) + 8000)
     }
 
     this.blow = function() {
-        $('#container').append('<div class="bubble" id="bubble-' + this.id + '"></div>');
+        $('#container').append(`<div class="bubble" id="bubble-${this.id}"></div>`);
         game.bubblesArr.push(this);
         $('#bubble-' + this.id).click(function() {
             var num = this.id.replace('bubble-', '');

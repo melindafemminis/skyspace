@@ -63,6 +63,9 @@ Template.journal.events({
 //         document.getElementById('previusJournal').innerHTML = html;
 // };
 
+
+
+
 Template.journal.helpers({
     'jounralEntry': function(){
         return journal.find({})
