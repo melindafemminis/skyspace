@@ -25,7 +25,6 @@ Template.journal.events({
             document.getElementById('inputNote').value,
             new Date()
         )
-        Template.journal.readDB();
         //Clear les 2 inputs titre et note
         document.getElementById('inputTitre').value = '';
         document.getElementById('inputNote').value = '';
@@ -41,33 +40,9 @@ Template.journal.events({
     }
 });
 
-
-
-////////////////////////////////////////////////////////////////////////
-// AFFICHER LES NOTES
-////////////////////////////////////////////////////////////////////////
-
-
-// Template.journal.readDB = function(){
-//     var tableau = [];
-//     journal.find({},{sort:[['createdAt', 'desc']]}).forEach( function(myDoc) { 
-//         tableau.push(myDoc ); 
-//     } );
-//     var html = '';
-//     for (let index = 0; index < tableau.length; index++) {
-//         const element = tableau[index];
-//         if(element != null && element.note != null)
-//             html += '<div class="journalDesign"><h3 id="h3css">'+element.titre +'</h3><p>'+element.note+'</p><a style="color:red !important;cursor:pointer;" id="deleteButton" >supprimer</a></div>';
-//     }
-//     if(document.getElementById('previusJournal'))
-//         document.getElementById('previusJournal').innerHTML = html;
-// };
-
-
-
-
 Template.journal.helpers({
     'jounralEntry': function(){
-        return journal.find({})
+        return journal.find({},{sort:[['createdAt', 'desc']]})
     }
+    
 })

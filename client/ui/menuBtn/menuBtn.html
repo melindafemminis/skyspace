@@ -1,50 +1,51 @@
 <template name='menuBtn'>
 
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
 
-  <!--Barre de navigation avec classe bootstrap 4-->
-  <nav class="navbar navbar-light">
+<!--Barre de navigation avec classe bootstrap 4-->
+<nav class="navbar navbar-light">
       
-    <!-- Collapse button (le span est le logo du hamburger menu) -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
-          aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></button>
+<!-- Collapse button (le span est le logo du hamburger menu) -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+          aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></button>
       
-      <!-- Collapsible content -->
-      <div class="collapse navbar-collapse overlay" id="navbarSupportedContent15">
+<!-- Collapsible content -->
+    <div class="collapse navbar-collapse overlay" id="navbarSupportedContent15">
           
-        <!-- Close button -->
-        <a href="javascript:void(0)" class="closebtn">&times;</a>
+    <!-- Close button -->
+    <a href="javascript:void(0)" class="closebtn">&times;</a>
 
-          <!-- Lien des pages -->
-          <div class="overlay-content">
-              <a href="/"> <img class="col-md-3 img" src="/accueil.png" >
-                Accueil</a>
-              <a href="methode"> <img class="col-md-3 img" src="/methodes.png" >
-                Méthode</a>
-              <a href="graphique"> <img class="col-md-3 img" src="/stat.png" >
-                Graphique</a>
-              <a href="journal"> <img class="col-md-3 img" src="/journal.png" >
-                  Journal</a>
-              <a href="bubblepop"> <img class="col-md-3 img" src="/bubble.png" >
-                    Bubblepop</a>
-              <a href="parametres"> <img class="col-md-3 img" src="/parametres.png" >
-                Paramètres</a>
-              <a href="feedback"> <img class="col-md-3 img" src="/feedback.png" >
-                Feedback</a>
-              <a href="apropos"> <img class="col-md-3 img" src="/aPropos.png" >
-                A propos</a>
-              <!-- Partie pour les boutons du login -->
-              {{#unless loggingIn}}
-              {{#if currentUser}}
-                <button class='recolor btn btn-outline-secondary js-logout'>Déconnexion</button>
-                <span class='navbar-text ml-2'>
-                  {{currentUser.profile.pseudo}}
-                </span>
-              {{else}}
-                <button class='recolor btn btn-success js-open-login'>Connexion</button>
-              {{/if}}
-              {{/unless}}
-          </div> 
-        </div>
-      </nav>
-</template>
+      <!-- Lien des pages -->
+      <div class="overlay-content">
+        <a href="/"> <img class="col-md-3 img" src="/accueil.png" >
+          Accueil</a>
+        <a href="methode"> <img class="col-md-3 img" src="/methodes.png" >
+          Méthode</a>
+        <a href="graphique"> <img class="col-md-3 img" src="/stat.png" >
+          Graphique</a>
+        <a href="journal"> <img class="col-md-3 img" src="/journal.png" >
+          Journal</a>
+        <a href="bubblepop"> <img class="col-md-3 img" src="/bubble.png" >
+          Bubblepop</a>
+        <a href="parametres"> <img class="col-md-3 img" src="/parametres.png" >
+          Paramètres</a>
+        <a href="feedback"> <img class="col-md-3 img" src="/feedback.png" >
+          Feedback</a>
+        <a href="apropos"> <img class="col-md-3 img" src="/aPropos.png" >
+          A propos</a>
+        <!-- Partie pour les boutons du login -->
+          {{#unless loggingIn}}
+          {{#if currentUser}}
+          <button class='recolor btn btn-outline-secondary js-logout'>Déconnexion</button>
+          <span class='navbar-text ml-2'>
+            {{currentUser.profile.pseudo}}
+          </span>
+            {{else}}
+               <button class='recolor btn btn-success js-open-login'>Connexion</button>
+           {{/if}}
+           {{/unless}}
+        </div> 
+      </div>
+    </nav>
+    </template>

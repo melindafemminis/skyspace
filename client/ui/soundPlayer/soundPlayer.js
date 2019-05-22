@@ -2,14 +2,13 @@ import '../parametres/parametres.html';
 
 
 //fonction qui permet de commencer la musique si on n'a pas mute.
-//Si le navigateur empeche de commencer la musique, on a un catch, et donc on mute la musique. 
-//Ainsi l'utilisateur verra que la musique est mute est en cliquant sur le bouton de musique, 
-//la navigateur acceptera cette fois de lancer la musique car c'est l'utilisateur qui le demande et 
-//non l'automatisme javascript
+//Si le navigateur empeche de commencer la musique, on a un catch, 
+//et donc on mute la musique. Ainsi l'utilisateur verra que la musique est mute et 
+//en cliquant sur le bouton de musique, la navigateur acceptera cette fois de lancer la musique 
+//car c'est l'utilisateur qui le demande et non l'automatisme javascript
 Template.fond.audioPlay = function(){
     if(!Template.fond.isMute)
-        Template.fond.audio.play().catch(function(){ //catch est une fonction qui s'execute après 
-        //quelques milli secondes.
+        Template.fond.audio.play().catch(function(){ 
             Template.fond.isMute = true;
         });
 }
@@ -25,7 +24,7 @@ Template.fond.audioPlay = function(){
 Template.fond.audioAutoStart = function(){
 
     //ici on lit l'url et les paramètres.
-    //on a en effet dans FlowRouter ajouté les paramètres de position dans le temps de la musique et de si on a mute ou non.
+    //dans FlowRouter ajouté les paramètres de position dans le temps de la musique et de si on a mute ou non.
     //Cela afin de reprendre la lecture au bon endroit au prochain chargement. 
     var url = (window.location+"");
     var soundPosition = "0";
@@ -46,8 +45,8 @@ Template.fond.audioAutoStart = function(){
 
     Template.fond.audioPlay(); //on joue la musique
 
-    //setTimeout permet de démarrer ce javascript 200 millisecondes plus tard afin de laisser 
-    //le temps au catch de audioPlay de se lancer si besoin et de mute la musique
+    //setTimeout permet de démarrer ce javascript 200 millisecondes plus tard 
+    //afin de laisser le temps au catch de audioPlay de se lancer si besoin et de mute la musique
     setTimeout(function(){
         //ici on créé un element <img> que l'on ajoute au body
         //cet element est notre bouton d'image.
@@ -67,8 +66,8 @@ Template.fond.audioAutoStart = function(){
 
 }
 
-//ici on défini isMute par défaut comme étant non muté, pour tenter de démarrer la musique 
-//automatiquement si le navigateur l'accepte.
+//ici on défini isMute par défaut comme étant non muté, 
+//pour tenter de démarrer la musique automatiquement si le navigateur l'accepte.
 Template.fond.isMute = false;
 
 //cette fonction permet de mute ou démuté la musique.

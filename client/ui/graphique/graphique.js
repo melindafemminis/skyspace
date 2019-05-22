@@ -32,6 +32,9 @@ Template.graphique.events({
         humeurFin.find().forEach( function(myDoc) { arrValueFin.push(myDoc.value); } );
         let arrDateFin = [];
         humeurFin.find().forEach( function(myDoc) { arrDateFin.push(myDoc.createdAt); } );
+        arrDateFin.forEach((el,i) => {
+            arrDateFin[i] = `${el.getHours()}:${el.getMinutes()} ${el.getDay()}/${el.getMonth()+1}/${el.getFullYear()}`
+        })
 
         //Le graphique
         var ctx = $('#myChart');

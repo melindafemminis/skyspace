@@ -3,7 +3,13 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
 
     {{> menuBtn}}
-    {{> fond}}
+
+    {{#if radioChecked}}
+        {{>montagne}}
+    {{else}}
+        {{>fond}}
+    {{/if}}
+
     
     <h2 class="text-center sentir">Comment te sens-tu ?</h2>
     <div class='container text-center'>
