@@ -4,8 +4,13 @@ import '../home/homeFond.html';
 
 Template.final.rendered = function(){
     $('body').removeClass('nuit');
-    Template.home.showNextQuote();
 }
+
+Template.final.helpers({
+    radioChecked(){
+        return document.getElementById("radioFond").checked;
+    }
+});
 
 Template.final.events({
     'click #recommencer'(event, instance) {

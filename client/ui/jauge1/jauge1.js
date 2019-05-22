@@ -4,5 +4,10 @@ import '../home/homeFond.html';
 
 Template.jauge1.rendered = function(){
     $('body').removeClass('nuit');
-    Template.home.showNextQuote();
 }
+
+Template.jauge1.helpers({
+    radioChecked(){
+        return document.getElementById("radioFond").checked;
+    }
+});
