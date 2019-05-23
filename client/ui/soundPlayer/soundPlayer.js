@@ -66,7 +66,7 @@ Template.fond.audioAutoStart = function(){
 
 }
 
-Template.fond.isMute = true;
+//Template.fond.isMute = true;
 
 //cette fonction permet de mute ou démuté la musique.
 Template.fond.audioMute = function() {
