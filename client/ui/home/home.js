@@ -8,16 +8,21 @@ import '../parametres/parametres.js';
 import '../parametres/parametres.html';
 
 
+
+
 //////////////////////////////////////////////////////////////////
 // TEMPLATE FOND  RENDERED
 //////////////////////////////////////////////////////////////////
 
 Template.fond.rendered = function () {
 
-    $('body').removeClass('nuit');
-    $('body').removeClass('purple');
-    Template.home.showNextQuote();
+    setTimeout( function () {
+    
+        $('body').removeClass('nuit');
+        $('body').removeClass('purple');
+    }, 200);
 };
+
 
 
 
@@ -39,6 +44,17 @@ Template.montagne.rendered = function () {
 //////////////////////////////////////////////////////////////////
 // HOME EVENTS 
 //////////////////////////////////////////////////////////////////
+
+Template.fond.rendered = function () {
+
+    setTimeout( function () {
+
+        Template.home.showNextQuote();
+
+    }, 200);
+
+};
+
 
 Template.home.events ({
 
