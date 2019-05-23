@@ -13,7 +13,9 @@ import '../parametres/parametres.html';
 //////////////////////////////////////////////////////////////////
 
 Template.fond.rendered = function () {
+
     $('body').removeClass('nuit');
+    $('body').removeClass('purple');
     Template.home.showNextQuote();
 };
 
@@ -28,8 +30,6 @@ Template.montagne.rendered = function () {
 
     $('body').removeClass('nuit');
     $('body').addClass('purple');
-    $('.citation').addClass('citationMontagne')
-    Template.home.showNextQuote();
 };
 
 
