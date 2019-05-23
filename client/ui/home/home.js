@@ -69,10 +69,8 @@ Template.home.helpers ({
             Template.home.showNextQuote();
 
             if ( Meteor.user().profile.montagnes == 'isChecked' ) {
-                console.log('Le fond montagnes est sélectionné !');
                 return true;
             } else {
-                console.log('Le fond montagne n est pas selectionné');
                 return false
             }
         }
