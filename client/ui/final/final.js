@@ -6,29 +6,27 @@ Template.final.rendered = function(){
     $('body').removeClass('nuit');
 }
 
-Template.final.helpers({
-    radioChecked(){
-        return document.getElementById("radioFond").checked;
-    }
-});
 
-Template.final.events({
-    'click #recommencer'(event, instance) {
-        event.preventDefault();
-        FlowRouter.go('jauge1?soundPosition='+Template.fond.audio.currentTime+'&isMute='+Template.fond.isMute);
+
+
+////////////////////////////////////////////////////
+// FINAL HELPERS POUR LE FOND + CITATIONS
+////////////////////////////////////////////////////
+
+Template.final.helpers ({
+
+    radioChecked: function () {
+
+        if ( Meteor.user().profile.montagnes == 'isChecked' ) {
+            return true;
+        } else {
+            return false
+        }
     },
-    'click #leRetour'(event, instance) {
-        event.preventDefault();
-        FlowRouter.go('/?soundPosition='+Template.fond.audio.currentTime+'&isMute='+Template.fond.isMute);
-        Template.home.showNextQuote();
 
-    }
-});
-
-Template.final.helpers({
     'choose': function(){
+
         let quotesFinal= [
-            "Oublie ce qui t’as blessé mais n’oublie pas ce que cela t’as appris",
             "Ces erreurs et ces fautes sont ce que je suis, dessinant les plus belles étoiles dans la constellation de ma vie",
             "N’aie pas peur d’échouer, aie peur de ne pas essayer",
             "Plus la montée est dure, plus la vue sera belle",
@@ -42,8 +40,35 @@ Template.final.helpers({
             "Le seul endroit où le succès précède le travail est dans le dictionnaire",
             "Pour pouvoir contempler un arc-en-ciel, il faut d’abord endurer la pluie",
             "L’échec est l’épice qui donne sa saveur au succès",
+            "Oublie ce qui t’as blessé mais n’oublie pas ce que cela t’as appris",
         ]
-      return quotesFinal[Math.floor(Math.random() * quotesFinal.length)];
-    
+
+        return quotesFinal[Math.floor(Math.random() * quotesFinal.length)];
+        
         }
-    });
+});
+
+
+
+
+
+////////////////////////////////////////////////////
+// FINAL EVENTS BOUTONS
+////////////////////////////////////////////////////
+
+Template.final.events ({
+
+    'click #recommencer' (event ) {
+
+        event.preventDefault();
+        FlowRouter.go('jauge1?soundPosition='+Template.fond.audio.currentTime+'&isMute='+Template.fond.isMute);
+    },
+
+    'click #leRetour' ( event ) {
+
+        event.preventDefault();
+        FlowRouter.go('/?soundPosition='+Template.fond.audio.currentTime+'&isMute='+Template.fond.isMute);
+        Template.home.showNextQuote();
+
+    }
+});
