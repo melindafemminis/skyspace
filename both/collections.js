@@ -75,20 +75,26 @@ Meteor.methods({
 
 
 ////////////////////////////////////////////////////////////////////////
-// BOUTONS PARAMETRES
+// BOUTONS PARAMETRES MUSIC + FOND
 ////////////////////////////////////////////////////////////////////////
 
 
 Meteor.methods ( {
     "musicOn": function (a) {
         let userId = Meteor.user()._id;
-        Meteor.users.update ( { _id: userId }, { $set: { "profile.isChecked": 'isChecked' } } );
+        Meteor.users.update ( { _id: userId }, { $set: { "profile.music": 'isChecked' } } );
+    },
+    "musicOff": function (a) {
+        let userId = Meteor.user()._id;
+        Meteor.users.update ( { _id: userId }, { $set: { "profile.music": 'notChecked' } } );
+    },
+    "montagnesOn": function (a) {
+        let userId = Meteor.user()._id;
+        Meteor.users.update ( { _id: userId }, { $set: { "profile.montagnes": 'isChecked' } } );
+    },
+    "montagnesOff": function (a) {
+        let userId = Meteor.user()._id;
+        Meteor.users.update ( { _id: userId }, { $set: { "profile.montagnes": 'notChecked' } } );
     }
 })
 
-Meteor.methods ( {
-    "musicOff": function (a) {
-        let userId = Meteor.user()._id;
-        Meteor.users.update ( { _id: userId }, { $set: { "profile.isChecked": 'notChecked' } } );
-    }
-})

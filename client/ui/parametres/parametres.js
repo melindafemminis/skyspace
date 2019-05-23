@@ -49,7 +49,22 @@ Template.parametres.events({
     },
 
     'click #radioFond' ( event, instance ) {
-        console.log("Le checkbox a été appuyé");
+
+        if ( event.target.checked ) {
+
+            console.log(event.target.checked);
+
+            //Appel d'une méthode qui sauve le state dans le profile de l'user
+            Meteor.call('montagnesOn',event.target);
+
+        } else {
+
+            console.log(event.target.checked);
+
+            //Appel d'une méthode qui sauve le state dans le profile de l'user
+            Meteor.call('montagnesOff',event.target);
+        }
+        
     },
      
     'click #deleteDonnees' ( event, instance ) {
@@ -74,11 +89,18 @@ Template.parametres.events({
 //////////////////////////////////////////////////////////////////
 
 Template.parametres.helpers({
-    isChecked: function(){
-        if ( Meteor.user().profile.isChecked == 'isChecked' ) {
-            return 'The isChecked is actually checked';
+    musicCheck: function(){
+        if ( Meteor.user().profile.music == 'isChecked' ) {
+            return 'The music in user profile is actually checked';
         } else {
-            return 'The isChecked is NOT checked';
+            return 'The music in user profile is NOT checked';
+        }
+    },
+    fondCheck: function(){
+        if ( Meteor.user().profile.montagnes == 'isChecked' ) {
+            return 'The montagnes in user profile is actually checked';
+        } else {
+            return 'The montagnes in user profile is NOT checked';
         }
     }
 })
