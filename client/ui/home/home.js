@@ -8,19 +8,71 @@ import '../parametres/parametres.js';
 import '../parametres/parametres.html';
 
 
-//changer la couleur de fond du body
-Template.fond.rendered = function(){
+//////////////////////////////////////////////////////////////////
+// TEMPLATE FOND  RENDERED
+//////////////////////////////////////////////////////////////////
+
+Template.fond.rendered = function () {
     $('body').removeClass('nuit');
     Template.home.showNextQuote();
-}
+};
 
 
-Template.home.events({
-    'click #startMethod'(event, instance) {
+
+
+//////////////////////////////////////////////////////////////////
+// TEMPLATE MONTAGNES  RENDERED
+//////////////////////////////////////////////////////////////////
+
+Template.montagne.rendered = function () {
+
+    $('body').removeClass('nuit');
+    $('body').addClass('purple');
+    $('.citation').addClass('citationMontagne')
+    Template.home.showNextQuote();
+};
+
+
+
+
+
+//////////////////////////////////////////////////////////////////
+// HOME EVENTS 
+//////////////////////////////////////////////////////////////////
+
+Template.home.events ({
+
+    'click #startMethod' ( event ) {
+
         event.preventDefault();  
         FlowRouter.go('jauge1?soundPosition='+Template.fond.audio.currentTime+'&isMute='+Template.fond.isMute);
     }
 });
+
+
+
+//////////////////////////////////////////////////////////////////
+// HOME HELPERS POUR CHOIX DU FOND SELON USER.PROFILE 
+//////////////////////////////////////////////////////////////////
+
+Template.home.helpers ({
+
+    radioChecked: function () {
+
+            if ( Meteor.user().profile.montagnes == 'isChecked' ) {
+                console.log('Le fond montagnes est sélectionné !');
+                return true;
+            } else {
+                console.log('Le fond montagne n est pas selectionné');
+                return false
+            }
+        }
+});
+
+
+//////////////////////////////////////////////////////////////////
+// CITATIONS 
+//////////////////////////////////////////////////////////////////
 
 Template.home.quoteIndex = -1;
 Template.home.showNextQuote = function() {
@@ -30,18 +82,8 @@ Template.home.showNextQuote = function() {
     .fadeIn(2000)
     .delay(2000)
     .fadeOut(2000, Template.home.showNextQuote);
-}
+};
 
-Template.home.helpers({
-    radioChecked(){
-        return document.getElementById("radioFond").checked;
-    }
-});
 
-Template.montagne.rendered = function(){
-    $('body').removeClass('nuit');
-    $('body').addClass('purple');
-    $('.citation').addClass('citationMontagne')
-    Template.home.showNextQuote();
-}
+
 
