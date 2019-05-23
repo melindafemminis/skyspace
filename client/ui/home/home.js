@@ -6,6 +6,7 @@ import '../fondMontagne/montagneCommencer.html';
 import '../fondMontagne/montagneCommencer.css';
 import '../parametres/parametres.js';
 import '../parametres/parametres.html';
+import '../soundPlayer/soundPlayer';
 
 
 
@@ -20,6 +21,16 @@ Template.commencer.rendered = function () {
     
         $('body').removeClass('nuit');
         $('body').removeClass('purple');
+
+        setTimeout(function(){
+            if ( Meteor.user().profile.music == 'isChecked' ) {
+                document.getElementById('soundButton').src = "/volume.png";
+                Template.fond.isMute = false;
+                Template.fond.audioPlay();
+            } else {
+                Template.fond.isMute = true;
+            }
+        }, 600);
 
     }, 200);
 };
@@ -37,6 +48,16 @@ Template.montagne.rendered = function () {
     $('body').removeClass('nuit');
     $('body').addClass('purple');
 
+    setTimeout(function(){
+        if ( Meteor.user().profile.music == 'isChecked' ) {
+            document.getElementById('soundButton').src = "/volume.png";
+            Template.fond.isMute = false;
+            Template.fond.audioPlay();
+        } else {
+            Template.fond.isMute = true;
+        }
+    }, 600);
+
 };
 
 
@@ -52,7 +73,7 @@ Template.home.events ({
     'click #startMethod' ( event ) {
 
         event.preventDefault();  
-        FlowRouter.go('jauge1?soundPosition='+Template.fond.audio.currentTime+'&isMute='+Template.fond.isMute);
+        FlowRouter.go('jauge1');
     }
 });
 
@@ -67,15 +88,14 @@ Template.home.helpers ({
     radioChecked: function () {
 
             Template.home.showNextQuote();
-
+            
             if ( Meteor.user().profile.montagnes == 'isChecked' ) {
-                console.log('Le fond montagnes est sélectionné !');
                 return true;
             } else {
-                console.log('Le fond montagne n est pas selectionné');
                 return false
             }
-        }
+    }
+    
 });
 
 

@@ -11,6 +11,6 @@ Template.sliderBtn1.events({
         new Date()
     )
       //Changer de page 
-      FlowRouter.go('theMethod?soundPosition='+Template.fond.audio.currentTime+'&isMute='+Template.fond.isMute);
+      FlowRouter.go('theMethod');
     }
 });

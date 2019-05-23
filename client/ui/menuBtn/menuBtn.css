@@ -1,57 +1,57 @@
-  .overlay {
-    height: 100%;
-    width: 70%;
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    background-color:#F0FBFF;
-    /*background-color: rgba(14, 41, 44, 0.9);*/
-    overflow-y: hidden;
-    transition: 0,5s;
-  }
+.overlay {
+  width: 70%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color:#F0FBFF;
+  /*background-color: rgba(14, 41, 44, 0.9);*/
+  overflow-y: hidden;
+  transition: 0,5s;
+  height: 100%;
+}
   
-  .overlay-content {
-    overflow: auto;
-    max-height: 80vh;
-    position: relative;
-    top: 12%;
-    width: 100%;
-    text-align: left;
-    margin-left: 1em;
-    margin-top: 1em;
-  }
+.overlay-content {
+  max-height: 80vh;
+  position: relative;
+  top: 12%;
+  width: 100%;
+  text-align: left;
+  margin-left: 1em;
+  margin-top: 1em;
+  overflow: auto;
+}
   
-  .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    font-family: "Montserrat";
-    color: #0E2337;
-    display: block;
-    transition: 0.3s;
-  }
+.overlay a {
+  text-decoration: none;
+  font-size: 36px;
+  font-family: "Montserrat";
+  color: #0E2337;
+  display: block;
+  transition: 0.3s;
+  padding: 8px;
+}
   
-  .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-  }
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
   
-  .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-  }
+.overlay .closebtn {
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  position: absolute;
+}
 
 
-  .img{
-    max-width: 75px;
-  }
+.img{
+  max-width: 75px;
+}
  
-  .recolor{
-    margin: 5%;
-    background-color:#245582!important;
-    border-color: #245582 !important;
-    font-size: 20px;
-    font-family: "Montserrat";
-  }
+.recolor{
+  background-color:#245582!important;
+  border-color: #245582 !important;
+  font-size: 20px;
+  font-family: "Montserrat";
+  margin: 5%;
+}
