@@ -20,6 +20,8 @@ Template.final.events({
     'click #leRetour'(event, instance) {
         event.preventDefault();
         FlowRouter.go('/?soundPosition='+Template.fond.audio.currentTime+'&isMute='+Template.fond.isMute);
+        Template.home.showNextQuote();
+
     }
 });
 

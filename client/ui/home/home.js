@@ -14,12 +14,13 @@ import '../parametres/parametres.html';
 // TEMPLATE FOND  RENDERED
 //////////////////////////////////////////////////////////////////
 
-Template.fond.rendered = function () {
+Template.commencer.rendered = function () {
 
     setTimeout( function () {
     
         $('body').removeClass('nuit');
         $('body').removeClass('purple');
+
     }, 200);
 };
 
@@ -35,6 +36,7 @@ Template.montagne.rendered = function () {
 
     $('body').removeClass('nuit');
     $('body').addClass('purple');
+
 };
 
 
@@ -44,17 +46,6 @@ Template.montagne.rendered = function () {
 //////////////////////////////////////////////////////////////////
 // HOME EVENTS 
 //////////////////////////////////////////////////////////////////
-
-Template.fond.rendered = function () {
-
-    setTimeout( function () {
-
-        Template.home.showNextQuote();
-
-    }, 200);
-
-};
-
 
 Template.home.events ({
 
@@ -74,6 +65,8 @@ Template.home.events ({
 Template.home.helpers ({
 
     radioChecked: function () {
+
+            Template.home.showNextQuote();
 
             if ( Meteor.user().profile.montagnes == 'isChecked' ) {
                 console.log('Le fond montagnes est sélectionné !');

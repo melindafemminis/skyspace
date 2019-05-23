@@ -18,6 +18,7 @@ Template.parametres.events({
 
     'click #retour' () {
         FlowRouter.go('/?soundPosition='+Template.fond.audio.currentTime+'&isMute='+Template.fond.isMute);
+        Template.home.showNextQuote();
         
     },
 
@@ -89,10 +90,8 @@ Template.parametres.helpers({
 
             if ( Meteor.user().profile.music == 'isChecked' ) {
                 document.getElementById('radioMusic').checked = true;
-            } else {
-                console.log('user.profile.music is NOT checked');
             }
-        }, 700);
+        }, 600);
     },
 
     fondCheck: function() {
@@ -101,9 +100,7 @@ Template.parametres.helpers({
 
             if ( Meteor.user().profile.montagnes == 'isChecked' ) {
                 document.getElementById('radioFond').checked = true;
-            } else {
-                console.log('user.profile.montagnes is NOT checked');
             }
-        }, 700);
+        }, 600);
     },
 });
