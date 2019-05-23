@@ -66,28 +66,29 @@ Template.fond.audioAutoStart = function(){
 
 }
 
-//ici on défini isMute par défaut comme étant non muté, 
-//pour tenter de démarrer la musique automatiquement si le navigateur l'accepte.
-Template.fond.isMute = false;
+Template.fond.isMute = true;
 
 //cette fonction permet de mute ou démuté la musique.
-Template.fond.audioMute = function(){
-    if(Template.fond.isMute){
+Template.fond.audioMute = function() {
+
+    if ( Template.fond.isMute ) {
+
         document.getElementById('soundButton').src = "/volume.png";
         Template.fond.isMute = false;
         Template.fond.audioPlay(); //on démarre la musique
-        document.getElementById("radioMusic").checked = true;
         Meteor.call('musicOn');
-    }else{
+
+    } else {
+
         Template.fond.isMute = true;
         document.getElementById('soundButton').src = "/volumeMute.png";
         Template.fond.audio.pause(); //on pause la musique
-        document.getElementById("radioMusic").checked = false;
         Meteor.call('musicOff');
     }
 }
 
 //ces valeurs sont présentes sur toutes les pages
 //ici on défini le lecteur de musique, et on autoStart la musique si le navigateur le veut bien.
+
 Template.fond.audio = new Audio("/Aurora.mp3");
 Template.fond.audioAutoStart();

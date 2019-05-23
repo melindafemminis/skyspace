@@ -9,18 +9,19 @@ Template.parametres.rendered = function(){
 
 
 
+
 //////////////////////////////////////////////////////////////////
 // EVENTS 
 //////////////////////////////////////////////////////////////////
 
 Template.parametres.events({
 
-    'click #retour' ( event, instance ) {
+    'click #retour' () {
         FlowRouter.go('/?soundPosition='+Template.fond.audio.currentTime+'&isMute='+Template.fond.isMute);
         
     },
 
-    'click #radioMusic' ( event, instance ) {
+    'click #radioMusic' ( event ) {
 
         if ( event.target.checked ) {
 
@@ -29,9 +30,7 @@ Template.parametres.events({
             Template.fond.isMute = false;
             Template.fond.audioPlay();
 
-            console.log(event.target.checked);
-
-            //Appel d'une méthode qui sauve le state dans le profile de l'user
+            //Appel d'une méthode qui sauve le state dans user.profile
             Meteor.call('musicOn',event.target);
 
         } else {
@@ -41,33 +40,27 @@ Template.parametres.events({
             document.getElementById('soundButton').src = "/volumeMute.png";
             Template.fond.audio.pause();
 
-            console.log(event.target.checked);
-
             //Appel d'une méthode qui sauve le state dans le profile de l'user
             Meteor.call('musicOff',event.target);
         }
     },
 
-    'click #radioFond' ( event, instance ) {
+    'click #radioFond' ( event ) {
 
         if ( event.target.checked ) {
 
-            console.log(event.target.checked);
-
-            //Appel d'une méthode qui sauve le state dans le profile de l'user
+            //Appel d'une méthode qui sauve le state dans user.profile
             Meteor.call('montagnesOn',event.target);
 
         } else {
 
-            console.log(event.target.checked);
-
-            //Appel d'une méthode qui sauve le state dans le profile de l'user
+            //Appel d'une méthode qui sauve le state dans user.profile
             Meteor.call('montagnesOff',event.target);
         }
         
     },
      
-    'click #deleteDonnees' ( event, instance ) {
+    'click #deleteDonnees' () {
 
         if (confirm('Effacer toutes les données ? Cette action est irréversible.')) {
             Meteor.call('clearHumeurs', {}, (err, res) => {
@@ -89,19 +82,28 @@ Template.parametres.events({
 //////////////////////////////////////////////////////////////////
 
 Template.parametres.helpers({
-    musicCheck: function(){
-        if ( Meteor.user().profile.music == 'isChecked' ) {
-            return 'The music in user profile is actually checked';
-        } else {
-            return 'The music in user profile is NOT checked';
-        }
-    },
-    fondCheck: function(){
-        if ( Meteor.user().profile.montagnes == 'isChecked' ) {
-            return 'The montagnes in user profile is actually checked';
-        } else {
-            return 'The montagnes in user profile is NOT checked';
-        }
-    }
-})
 
+    musicCheck: function() {
+
+        setTimeout(function(){
+
+            if ( Meteor.user().profile.music == 'isChecked' ) {
+                document.getElementById('radioMusic').checked = true;
+            } else {
+                console.log('user.profile.music is NOT checked');
+            }
+        }, 700);
+    },
+
+    fondCheck: function() {
+
+        setTimeout(function() {
+
+            if ( Meteor.user().profile.montagnes == 'isChecked' ) {
+                document.getElementById('radioFond').checked = true;
+            } else {
+                console.log('user.profile.montagnes is NOT checked');
+            }
+        }, 700);
+    },
+});
