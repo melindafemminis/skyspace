@@ -1,14 +1,7 @@
 import './graphique.html';
 import '../../../both/collections';
-//Importation des fichiers nécessaire à la création du graphique avec chart.js
 import '../../../node_modules/chart.js/dist/Chart.bundle';
 import '../../../node_modules/chart.js/dist/Chart.bundle.min';
-
-
-
-////////////////////////////////////////////////////////////////////////////////////
-/// C O U L E U R   F O N D
-////////////////////////////////////////////////////////////////////////////////////
 
 Template.graphique.rendered = function(){
      $('body').addClass('nuit');
@@ -16,22 +9,24 @@ Template.graphique.rendered = function(){
 
 
 ////////////////////////////////////////////////////////////////////////////////////
-/// G R A P H I Q U E
+// GRAPHIQUE
 ////////////////////////////////////////////////////////////////////////////////////
 
+Template.graphique.events ({
 
-Template.graphique.events({
-    'click #graphBtn': function(){
+    'click #graphBtn': function () {
 
-        //Créer 2 array avec les valeurs de la collections humeurDebut mongoDB.
+        //Créer 2 array avec les valeurs des collections humeurDebut et humeurFin
         let arrValue = [];
-        humeurDebut.find().forEach( function(myDoc) { arrValue.push(myDoc.value ); } );
+        humeurDebut.find().fetch().forEach( function(e) { arrValue.push( e.note ); } );
         let arrDate = [];
-        humeurDebut.find().forEach( function(myDoc) { arrDate.push(myDoc.createdAt ); } );
+        humeurDebut.find().forEach( function(e) { arrDate.push( e.createdAt ); } );
         let arrValueFin = [];
-        humeurFin.find().forEach( function(myDoc) { arrValueFin.push(myDoc.value); } );
+        humeurFin.find().forEach( function(e) { arrValueFin.push( e.note ); } );
         let arrDateFin = [];
-        humeurFin.find().forEach( function(myDoc) { arrDateFin.push(myDoc.createdAt); } );
+        humeurFin.find().forEach( function(e) { arrDateFin.push( e.createdAt ); } );
+
+        //Pour l'affichage de la date 
         arrDateFin.forEach((el,i) => {
             arrDateFin[i] = `${el.getHours()}:${el.getMinutes()} ${el.getDay()}/${el.getMonth()+1}/${el.getFullYear()}`
         })
@@ -39,12 +34,12 @@ Template.graphique.events({
         //Le graphique
         var ctx = $('#myChart');
         Chart.defaults.global.defaultFontColor = "rgba(240,251,255,1)";
-        var myChart = new Chart(ctx, {
+        var myChart = new Chart ( ctx, {
             type: 'line',
             data: {
 				labels: arrDateFin,
 				datasets: [{
-					label: 'Humeurs Début',
+					label: 'Début de la méthode',
 					backgroundColor: "rgba(100,251,255,1)",
 					borderColor: "rgba(100,251,255,0.7)",
 					data: arrValue.map(function(i){
@@ -52,7 +47,7 @@ Template.graphique.events({
                     }),
 					fill: false,
 				}, {
-					label: 'Humeur Fin',
+					label: 'Fin de la méthode',
 					fill: false,
 					backgroundColor: "rgba(100,120,255,1)",
 					borderColor: "rgba(100,120,255, 1)",
@@ -77,12 +72,13 @@ Template.graphique.events({
 
 
 ////////////////////////////////////////////////////////////////////////////////////
-/// D E L E T E   D A T A
+// DELETE DATA
 ////////////////////////////////////////////////////////////////////////////////////
 
 
-Template.graphique.events({
-    'click #delete': function(){
+Template.graphique.events ({
+
+    'click #delete': function () {
         if (confirm('Effacer toutes les données ? Cette action est irréversible.')) {
             Meteor.call('clearHumeurs', {}, (err, res) => {
                 if (err) {
