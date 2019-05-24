@@ -21,6 +21,8 @@ Template.commencer.rendered = function () {
         $('body').removeClass('nuit');
         $('body').removeClass('purple');
 
+        Template.home.showNextQuote();
+
     }, 200);
 };
 
@@ -34,10 +36,12 @@ Template.commencer.rendered = function () {
 
 Template.montagne.rendered = function () {
 
-    $('body').removeClass('nuit');
-    $('body').addClass('purple');
+    setTimeout ( function () {
+        $('body').addClass('purple');
+        $('body').removeClass('nuit');
 
-};
+    }, 200);
+}
 
 
 
@@ -65,8 +69,6 @@ Template.home.events ({
 Template.home.helpers ({
 
     radioChecked: function () {
-
-            Template.home.showNextQuote();
 
             if ( Meteor.user().profile.montagnes == 'isChecked' ) {
                 return true;

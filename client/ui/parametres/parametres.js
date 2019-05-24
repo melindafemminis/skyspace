@@ -18,8 +18,9 @@ Template.parametres.events({
 
     'click #retour' () {
         FlowRouter.go('/?soundPosition='+Template.fond.audio.currentTime+'&isMute='+Template.fond.isMute);
-        Template.home.showNextQuote();
-        
+        if ( Meteor.user().profile.montagnes == 'isChecked' ){
+            Template.home.showNextQuote();
+        }
     },
 
     'click #radioMusic' ( event ) {
