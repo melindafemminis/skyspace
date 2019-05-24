@@ -45,7 +45,14 @@ L'app contient des informations sur le principe des <i>grouding methods</i> et q
 
 <h2>Collections</h2>
 
-En construction ...
+Skyspace comprend 4 collections MongoDB: 
+
+- users est utilisée pour la gestion des comptes d'utilisateurs·trices . Ielle  doit être connecté pour avoir accès à certaines fonctions (bubblepop + paramètres). L'enregistrement des choix musique et fond se faire dans user.profile. 
+- humeurDebut stocke la note que l'utilisateur·trice  donne à son humeur avant de commencer la méthode + date. 
+- humeurFin et pour sa note après + date. humeurDebut et humeurFin sont ensuite récupérée pour la créationd d'un graphique. 
+- journal contient les note de journal que l'utilisateur·trice  peut écrire. 
+
+Ces 4 collections sont indépendantes. 
 
 <h2>License</h2>
 
@@ -55,10 +62,12 @@ L'application *SkySpace* a été développée grâce au framework de développem
 
 Les principaux modules Meteor utilisés dans ce projet sont :
 
-reactiveVar 1.0.11 (variables réactives)
-FlowRouter (les liens)
-Blaze Layout (render des templates)
-Bootstrap (style)
+- reactiveVar 1.0.11 (variables réactives)
+- FlowRouter (les liens)
+- Blaze Layout (render des templates)
+- Bootstrap (style)
+- accounts-password@1.5.1 et useraccounts:bootstrap (compte utilisateurs)
+
 Certaines libraries et modules utilisés pour le développement sont parfois soumis à un copyright par leurs auteurs respectifs.
 
 Copyright © 2019 - the *SkySpace* team : Jessica Chautems - Catherine Pedroni - Melinda Femminis - Kenan Yildiz. 
