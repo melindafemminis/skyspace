@@ -47,10 +47,10 @@ L'app contient des informations sur le principe des <i>grouding methods</i> et q
 
 Skyspace comprend 4 collections MongoDB: 
 
-- users est utilisée pour la gestion des comptes d'utilisateurs·trices . Ielle  doit être connecté pour avoir accès à certaines fonctions (bubblepop + paramètres). L'enregistrement des choix musique et fond se faire dans user.profile. 
-- humeurDebut stocke la note que l'utilisateur·trice  donne à son humeur avant de commencer la méthode + date. 
-- humeurFin et pour sa note après + date. humeurDebut et humeurFin sont ensuite récupérée pour la créationd d'un graphique. 
-- journal contient les note de journal que l'utilisateur·trice  peut écrire. 
+- "users" est utilisée pour la gestion des comptes d'utilisateurs·trices . Ielle  doit être connecté pour avoir accès à certaines fonctions (bubblepop + paramètres). L'enregistrement des choix musique et fond se faire dans user.profile. 
+- "humeurDebut" stocke la note que l'utilisateur·trice  donne à son humeur avant de commencer la méthode + date. 
+- "humeurFin" et pour sa note après + date. humeurDebut et humeurFin sont ensuite récupérée pour la créationd d'un graphique. 
+- "journal" contient les note de journal que l'utilisateur·trice  peut écrire. 
 
 Ces 4 collections sont indépendantes. 
 
