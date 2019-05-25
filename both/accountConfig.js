@@ -14,8 +14,8 @@ let password = AccountsTemplates.removeField('password');
 AccountsTemplates.addField ( {
     _id: 'pseudo',
     type: 'text',
-    display: "Nom d'utilisateur",
     placeholder: 'Pseudo',
+    display: "Nom d'utilisateur·trice",
     required: true,
     minLenght: 3,
     trim: true

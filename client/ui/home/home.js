@@ -39,7 +39,6 @@ Template.montagne.rendered = function () {
     setTimeout ( function () {
         $('body').addClass('purple');
         $('body').removeClass('nuit');
-
     }, 200);
 }
 
