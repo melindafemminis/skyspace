@@ -29,25 +29,22 @@ Meteor.methods({
 ////////////////////////////////////////////////////////////////////////
 
 Meteor.methods({
+
     "addNote": function(titre, note, date){
         journal.insert({
             titre: titre,
             note: note,
             createdAt: date
         })
-    }
-})
+    },
 
-Meteor.methods({
     "addH1": function(note, date){
         humeurDebut.insert({
             note: note,
             createdAt: date
         })
-    }
-})
+    },
 
-Meteor.methods({
     "addH2": function(note, date){
         humeurFin.insert({
             note: note,

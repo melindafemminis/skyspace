@@ -27,6 +27,5 @@ useraccounts:bootstrap
 
 ostrio:flow-router-extra
 kadira:blaze-layout
-email
 session
 msavin:mongol
