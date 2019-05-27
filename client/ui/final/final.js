@@ -24,7 +24,7 @@ Template.final.helpers ({
         }
     },
 
-    'choose': function(){
+    'choose': function () {
 
         let quotesFinal= [
             "Ces erreurs et ces fautes sont ce que je suis, dessinant les plus belles étoiles dans la constellation de ma vie",
@@ -68,7 +68,10 @@ Template.final.events ({
 
         event.preventDefault();
         FlowRouter.go('/?soundPosition='+Template.fond.audio.currentTime+'&isMute='+Template.fond.isMute);
-        Template.home.showNextQuote();
+        
+        if ( Meteor.user().profile.montagnes == 'isChecked' ) {
+            Template.home.showNextQuote();
+        }
 
     }
 });
