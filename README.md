@@ -1,7 +1,7 @@
 # Skyspace - Read Me
 <i>Jessica Chautems, Catherine Pedroni, Melinda Femminis et Kenan Yildiz</i>
 
-Projet du cours Programmation pour Internet II - Meteor.js donné par Isaac Pante et Loris Rimaz, SP 2019.
+Projet du cours Programmation pour Internet II - Meteor.js donné par Isaac Pante et accompagné par Loris Rimaz, tuteur, SP 2019.
 
 Faculté des Lettres - Université de Lausanne
 
