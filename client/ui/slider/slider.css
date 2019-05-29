@@ -5,16 +5,44 @@
     width: 20px;
     height: 200px;
     padding: 0;
+    margin: 20px;
   }
   
   .sliderWrapper input {
-    width: 150px;
-    height: 20px;
+    width: 200px;
+    height: 10px;
     margin: 0;
     transform-origin: 75px 75px;
     transform: rotate(-90deg);
   }
 
+  .slider {
+    -webkit-appearance: none;
+    border-radius: 10px;   
+    background: #ffffffbd;
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
   
-#sliderValueField {
-}
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: rgb(9, 54, 97);
+    cursor: pointer;
+    opacity: 1;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(9, 54, 97);
+    cursor: pointer;
+    opacity: 1;
+  }
+
