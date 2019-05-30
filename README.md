@@ -70,4 +70,6 @@ Les principaux modules Meteor utilisés dans ce projet sont :
 
 Certaines libraries et modules utilisés pour le développement sont parfois soumis à un copyright par leurs auteurs respectifs.
 
+Musique libre de droits: "Aurora" par Jonny Easton. Lien: https://www.youtube.com/watch?v=Ct44WnxlPC0
+
 Copyright © 2019 - the *SkySpace* team : Jessica Chautems - Catherine Pedroni - Melinda Femminis - Kenan Yildiz. 
