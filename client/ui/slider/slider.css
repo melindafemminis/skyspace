@@ -6,6 +6,7 @@
     height: 200px;
     padding: 0;
     margin: 20px;
+    padding-left: 5px;
   }
   
   .sliderWrapper input {
@@ -50,7 +51,8 @@
     margin: 0 auto;
   }
 
-  .input{
-    margin: none !important;
+  #sliderValueField{
+    color: rgb(12, 65, 114);
+    font-size: 25px;
   }
 
