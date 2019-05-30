@@ -11,7 +11,6 @@
   .sliderWrapper input {
     width: 200px;
     height: 10px;
-    margin: 0;
     transform-origin: 75px 75px;
     transform: rotate(-90deg);
   }
@@ -32,7 +31,7 @@
     width: 25px;
     height: 25px;
     border-radius: 50%; 
-    background: rgb(9, 54, 97);
+    background: rgb(12, 65, 114);
     cursor: pointer;
     opacity: 1;
   }
@@ -41,8 +40,17 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: rgb(9, 54, 97);
+    background: rgb(12, 65, 114);
     cursor: pointer;
     opacity: 1;
+  }
+
+  .value{
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  .input{
+    margin: none !important;
   }
 

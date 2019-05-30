@@ -8,7 +8,7 @@
 <!-- Collapse button (le span est le logo du hamburger menu) -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
           aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></button>
+  <span  aria-hidden="true"><img class="menu" src="/menu.png"></span></button>
       
 <!-- Collapsible content -->
     <div class="collapse navbar-collapse overlay" id="navbarSupportedContent15">
@@ -37,7 +37,7 @@
         <!-- Partie pour les boutons du login -->
           {{#unless loggingIn}}
           {{#if currentUser}}
-          <button class='recolor btn btn-outline-secondary js-logout'>Déconnexion</button>
+          <button class='recolorDeco btn btn-outline-secondary js-logout'>Déconnexion</button>
           <span class='navbar-text ml-2'>
             {{currentUser.profile.pseudo}}
           </span>

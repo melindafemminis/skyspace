@@ -2,27 +2,31 @@
     color: #F0FBFF; 
     text-align: center;
     font-family: "Montserrat";
+    margin-left: 8%;
+    padding: 10px;
 }
 
 .titre4 {
     color: #F0FBFF; 
     font-family: "Montserrat";
+    margin-left: 8%;
 }
 
 .texteApropos {
     font-family: "Montserrat";
     color: #F0FBFF;
+    margin-left: 10%;
 }
 
 .texteApropos2 {
     font-family: "Montserrat";
     font-style: italic;
     color: #F0FBFF;
+    margin-left: 10%;
 }
 
 .containerAPropos{
     overflow: auto;
     max-height: 80vh;
-   /* margin-left:300px !important; Ca perturbe le texte de la page!*/
 }
 

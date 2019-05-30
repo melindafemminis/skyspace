@@ -1,6 +1,10 @@
+  .navbar-toggler{
+    border-color: rgba(240, 251, 255, 0.315) !important;
+  }
+  
   .overlay {
     height: 100%;
-    width: 70%;
+    width: 40%;
     position: fixed;
     z-index: 2;
     top: 0;
@@ -54,4 +58,17 @@
     border-color: #245582 !important;
     font-size: 20px;
     font-family: "Montserrat";
+  }
+
+  .recolorDeco{
+    margin: 5%;
+    color: rgb(233, 247, 255) !important;
+    background-color:#418ed6!important;
+    border-color: #418ed6 !important;
+    font-size: 20px;
+    font-family: "Montserrat";
+  }
+
+  .menu{
+    max-width: 25px;
   }
